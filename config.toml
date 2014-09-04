@@ -1,3 +1,6 @@
-baseurl = "http://yourSiteHere"
+baseurl = "http://blog.gopheracademy.com"
 languageCode = "en-us"
-title = "my new hugo site"
+title = "Gopher Academy Blog"
+disqusShortname = "gopheracademy"
+[taxonomies]
+   author = "authors"
