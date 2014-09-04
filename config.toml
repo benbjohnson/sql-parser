@@ -1,0 +1,3 @@
+baseurl = "http://yourSiteHere"
+languageCode = "en-us"
+title = "my new hugo site"
