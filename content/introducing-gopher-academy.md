@@ -1,7 +1,7 @@
 +++
 title = "Introducing Gopher Academy"
 date = 2013-07-09T06:40:42Z
-author = "Brian Ketelsen"
+author = ["Brian Ketelsen"]
 +++
 
 # Introduction

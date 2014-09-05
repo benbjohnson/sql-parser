@@ -2,7 +2,7 @@
 title = "Plumbing and Semantics: Communication Patterns in Distributed System"
 linktitle = "plumbing and semantics"
 date = 2014-02-06T06:40:42Z
-author = "Derek Collison"
+author = ["Derek Collison"]
 +++
 
 ## Introduction

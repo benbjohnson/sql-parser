@@ -1,7 +1,7 @@
 +++
 title = "Go development environment for Vim"
 date = 2014-03-29T06:40:42Z
-author = "Fatih Arslan"
+author = ["Fatih Arslan"]
 +++
 
 # Go development environment for Vim

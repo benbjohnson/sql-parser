@@ -2,7 +2,7 @@
 title = "Writing a Distributed Systems Library in Go"
 linktitle = "writing a distributed systems library in go"
 date = 2014-01-06T06:40:42Z
-author = "Ben Johnson"
+author = ["Ben Johnson"]
 +++
 
 

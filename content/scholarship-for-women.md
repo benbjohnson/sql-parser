@@ -1,7 +1,7 @@
 +++
 title = "GopherCon 2014 Scholarship for Women"
 date = 2014-01-15T06:40:42Z
-author = "Brian Ketelsen"
+author = ["Brian Ketelsen"]
 +++
 
 # Announcing the GopherCon Scholarship Program

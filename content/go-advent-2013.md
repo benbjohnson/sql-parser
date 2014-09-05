@@ -1,7 +1,7 @@
 +++
 title = "Go Advent 2013 starts next week"
 date = 2013-11-25T06:40:42Z
-author = "Brian Ketelsen"
+author = ["Brian Ketelsen"]
 +++
 
 # Introduction

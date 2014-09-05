@@ -2,7 +2,7 @@
 title = "Go Advent Stocking Stuffer Bonus - Ginkgo and Gomega: BDD-Style Testing For Go"
 linktitle = "go advent stocking stuffer bonus"
 date = 2013-12-23T06:40:42Z
-author = "Onsi Fakhouri"
+author = ["Onsi Fakhouri"]
 
 # Ginkgo and Gomega: BDD-Style Testing For Go
 

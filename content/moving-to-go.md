@@ -2,7 +2,7 @@
 title = "Moving to Go: A Pragmatic Guide"
 linktitle = "moving to go"
 date = 2014-01-27T06:40:42Z
-author = "Paddy Foran"
+author = ["Paddy Foran"]
 +++
 
 # Moving to Go

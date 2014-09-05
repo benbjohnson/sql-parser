@@ -1,7 +1,7 @@
 +++
 title = "SkyDNS (Or The Long Road to Skynet)"
 date = 2013-10-10T06:40:42Z
-author = "Brian Ketelsen"
+author = ["Brian Ketelsen"]
 +++
 
 # SkyDNS and Skynet

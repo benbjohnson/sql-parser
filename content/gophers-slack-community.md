@@ -1,7 +1,7 @@
 +++
 title = "Join Our New Slack Community For Gophers"
 date = 2014-05-12T06:40:42Z
-author = "William Kennedy"
+author = ["William Kennedy"]
 +++
 
 ## Why Are We Doing This?

@@ -1,7 +1,7 @@
 +++
 title = "GopherCon 2014 Retrospective(Denver, Colorado - 2014)"
 date = 2014-05-02T06:40:42Z
-author = "Brian Ketelsen"
+author = ["Brian Ketelsen"]
 +++
 
 # It's a Wrap

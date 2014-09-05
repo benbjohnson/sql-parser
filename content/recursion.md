@@ -1,7 +1,7 @@
 +++
 title = "Recursion and Tail Calls in Go"
 date = 2013-07-23T06:40:42Z
-author = "William Kennedy"
+author = ["William Kennedy"]
 +++
 
 ## Introduction
