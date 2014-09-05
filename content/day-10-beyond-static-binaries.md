@@ -42,7 +42,7 @@ But while those phases are critical, they aren't the only hammer for each nail.
 
 ## Dependencies
 
-Presumably you know all about [`go`get`](http://golang.org/cmd/go/#hdr-Download_and_install_packages_and_dependencies) and its way of tracking packages from git, hg, svn and bzr. If you work at Google, or maintain every single one of your dependant libraries, you'll be comfortable running on HEAD from each of your dependencies. But most of us don't live in that world.
+Presumably you know all about [``go`get`](http://golang.org/cmd/go/#hdr-Download_and_install_packages_and_dependencies) and its way of tracking packages from git, hg, svn and bzr. If you work at Google, or maintain every single one of your dependant libraries, you'll be comfortable running on HEAD from each of your dependencies. But most of us don't live in that world.
 
 The most low-tech approach is to use source-control submodules, and all of the above version control systems support them out of the box. Of course, I've yet to find someone (who is not a version control hacker) who actually likes submodules. Even if you do love submodules, they still don't support dependencies stored in other version control systems.
 
@@ -67,9 +67,9 @@ While working with transitive dependencies isn't perfect, it's got support for i
 
 ## Automation
 
-While plenty of folks are happy with `go`build`](http://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies]), by far the most popular way to deal with more complicated automation situations is boring old `make`. I promise your admin loves traditional `Makefile`s over `autotools`.
+While plenty of folks are happy with [``go`build`](http://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies), by far the most popular way to deal with more complicated automation situations is boring old `make`. I promise your admin loves traditional `Makefile`s over `autotools`.
 
-Presumably you'll use this to wrap your favorite testing tool, from [`go`test`](http://golang.org/cmd/go/#hdr-Test_packages) to a Test-Anything tool like `bats`](https://github.com/sstephenson/bats]).
+Presumably you'll use this to wrap your favorite testing tool, from [``go`test`](http://golang.org/cmd/go/#hdr-Test_packages) to a Test-Anything tool like [`bats`](https://github.com/sstephenson/bats]).
 
 ## Deployment
 
@@ -97,7 +97,7 @@ But of course, sometimes a boring old config file is not enough. Sometimes you n
 
 Of course, local system configuration is not nearly as important as cross-system config in today's distributed systems. Especially in systems that need [blue-green deployments](http://martinfowler.com/bliki/BlueGreenDeployment.html), or database master election, or even if you want to easily remove memcached servers; it's important to be able to push configs out across clusters of services.
 
-[Paxos](http://research.microsoft.com/en-us/um/people/lamport/pubs/lamport-paxos.pdf) and [Raft](https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf) are distributed consensus protocols implemented by [zookeeper](http://zookeeper.apache.org), [[https://github.com/ha/doozerd][doozerd]] and [etcd](https://github.com/coreos/etcd) (which you should read more about in [Bonventre's Go Advent discussion of service discover](http://blog.gopheracademy.com/day-06-service-discovery-with-etcd)). These provide the strongest consistency possible for coordinating config changes across services.
+[Paxos](http://research.microsoft.com/en-us/um/people/lamport/pubs/lamport-paxos.pdf) and [Raft](https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf) are distributed consensus protocols implemented by [zookeeper](http://zookeeper.apache.org), [doozerd](https://github.com/ha/doozerd) and [etcd](https://github.com/coreos/etcd) (which you should read more about in [Bonventre's Go Advent discussion of service discover](http://blog.gopheracademy.com/day-06-service-discovery-with-etcd)). These provide the strongest consistency possible for coordinating config changes across services.
 
 For less stringent requirements, [Serf](https://github.com/hashicorp/serf) is designed to let services discover their peers.
 
