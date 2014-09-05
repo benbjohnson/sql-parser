@@ -2,6 +2,7 @@
 title = "Gogs: Binary Deployment: The Right Way to Deploy"
 date = 2014-04-01T06:40:42Z
 author = ["Jiahua Chen"]
++++
 
 # Gogs: When you're deploying a binary, you're doing it Right.
 
