@@ -12,9 +12,9 @@ rest.
 
 ## SkyDNS
 
-Today we're releasing SkyDNS as an open source project on [[https://github.com/skynetservices/skydns][github]].  SkyDNS is our attempt to solve the problem of finding 
-the services that are running in a large environment.  SkyDNS acts as a DNS service that only returns [[http://en.wikipedia.org/wiki/SRV_record][SRV records]].  Services announce 
-their availability by sending a POST with a small JSON payload.  Each service has a [[http://en.wikipedia.org/wiki/Time_to_live][Time to Live]] that allows SkyDNS 
+Today we're releasing SkyDNS as an open source project on [github](https://github.com/skynetservices/skydns).  SkyDNS is our attempt to solve the problem of finding 
+the services that are running in a large environment.  SkyDNS acts as a DNS service that only returns [SRV records](http://en.wikipedia.org/wiki/SRV_record).  Services announce 
+their availability by sending a POST with a small JSON payload.  Each service has a [Time to Live](http://en.wikipedia.org/wiki/Time_to_live) that allows SkyDNS 
 to expire records for services that haven't updated their availability within the TTL window.  Services can send a periodic POST to SkyDNS updating their TTL to keep 
 them in the pool.
 
