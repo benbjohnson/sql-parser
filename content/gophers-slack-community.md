@@ -8,7 +8,7 @@ author = ["William Kennedy"]
 
 GopherCon was an amazing experience for many of us who had the privilege to go. We met so many great people. Some for the first time and many who we had relationships with on social sites such as Twitter and G+. On my last night in Denver I started to feel sad. I didn’t want to lose that camaraderie I had made with these friends. I just kept thinking, how could this be sustained?
 
-After a couple of weeks of experimenting and talking with friends, Ed Gonzalez introduced me to a product called [[https://slack.com/][Slack]]. Within 5 minutes we registered a group, invited our friends and asked a few of them to be admins. Within a couple of days we had 25 people in the community. Everyone was really excited about the platform and the possibilities it brought to community building.
+After a couple of weeks of experimenting and talking with friends, Ed Gonzalez introduced me to a product called [Slack](https://slack.com/). Within 5 minutes we registered a group, invited our friends and asked a few of them to be admins. Within a couple of days we had 25 people in the community. Everyone was really excited about the platform and the possibilities it brought to community building.
 
 We thought it would be awesome to publicly open up the group to the community. Slack is an invite only system, so to make the community inclusive we recognized the need for a central authority that everyone would trust. We also wanted to put a structure in place that would minimize and monitor those who wanted to be a disruption. After many discussions we came up with following structure:
 
