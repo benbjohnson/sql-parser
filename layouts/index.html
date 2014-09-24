@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+{{ partial "hero.html" . }}
+
+
+  <div class="well well-sm" id="article">
+      <h2>{{.Title}}</h2>
+  <ul class="posts">
+      {{ range .Data.Pages }}
+      <li>
+	      <span>
+		      <a href="{{ .Permalink }}">{{ .Title }}</a>
+		      <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+		      <p>Summary content to be placed here.........</p>
+	      </span>
+      </li>
+      <hr />
+      {{ end }}
+  </ul>
+  
+
+  {{ partial "pagination.html" }}
+  {{ partial "footer.html" }}
+  </div>
+ 
+
+ {{ partial "scroll.html" }}
