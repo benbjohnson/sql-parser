@@ -798,4 +798,13 @@ time
     background: url('../Images/scollrocket.png') no-repeat;
   
 }
-
+ 
+ 
+ .newCredit {
+ 	position: absolute;
+ 	display: block;
+ 	left: 5px;
+ 	bottom: 0;
+ 	width: 230px;
+ 	
+ }

@@ -82,12 +82,18 @@
           <li> <a href="{{ . }}"><i class="fa fa-linkedin-square"></i> linkedin</a> </li>
           <li> <a href="{{ . }}"><i class="fa fa-facebook-square"></i> facebook</a></li>
           <li> <a href="{{ . }}"><i class="fa fa-github-square"></i> github</a> </li>
-         </div>
-         
-       
-         	
-              
+         </div> 
+           
        </ul>
+       <div class="newCredit">
+       	<p class="text-muted ">{{ with .Site.Params.Copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}} Gopher Academy, LLC 2013
+       	    <br />Powered by <a style="color:#FF4088;" href="http://gohugo.io/" target="_blank">Hugo</a> 
+       	    <br />Designed by <a href="http://www.ardanstudios.com/" style="color:#ef6133;" target="_blank">Ardan Studios</a>
+       	    {{end}}
+       	</p>
+       	
+       
+       </div> 
      
    
        	
