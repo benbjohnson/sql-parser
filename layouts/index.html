@@ -9,8 +9,8 @@
       {{ range .Data.Pages }}
       <li>
 	      <span>
-		      <a href="{{ .Permalink }}">{{ .Title }}</a>
-		      <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+		      <p class=".lead"><a href="{{ .Permalink }}">{{ .Title }}</a>
+		      <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></p>
 		      <p>{{ .Summary }}</p>
 	      </span>
       </li>
@@ -22,6 +22,6 @@
   {{ partial "pagination.html" }}
   {{ partial "footer.html" }}
   </div>
- 
+ 	
 
  {{ partial "scroll.html" }}

@@ -1,13 +1,15 @@
 {{ partial "header.html" . }}
   <div id="article">
   
-  <p>{{ .Render "summary"}}</p>
-  
+
    <div class="article-title">{{ .Title }}</div>
    <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</small></p> <hr/>
    <div class="post">
      {{ .Content }}
    </div>
+<p>
+{{ template "_internal/disqus.html" . }}
+</p>
  </div>
 
 
@@ -18,8 +20,6 @@
      {{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
      {{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
 </ul>
-
-{{ template "_internal/disqus.html" . }}
 
     </ul>
     </div>
