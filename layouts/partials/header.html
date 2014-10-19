@@ -56,13 +56,16 @@
           <li class="sidebar-brand"><a href="{{ .Site.BaseUrl }}/"><img src="../images/gopheracademy-logo.png" alt="" /></a></li>
           <hr /> 
           
+				<form action="http://google.com/search" method="get">
 
           <div class="post_search input-group">
-            <input type="text" class="form-control">
+			            <input type="text" name="q" results="0" class="form-control">
+						<input type="hidden" name="q" value="site:blog.gopheracademy.com">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
           </div>
+			</form>
 
           <hr /> 
           <li class=""><a  href="{{ .Site.BaseUrl }}/post/">Categories</a></li>
