@@ -2,6 +2,8 @@
 title = "Go Advent Day 1 - Go 1.2 is released"
 date = 2013-12-01T06:40:42Z
 author = ["Dave Cheney"]
+tags = ["go","releases"]
+series = "Go Advent Calendar 2013"
 +++
 
 ## Welcome

@@ -4,7 +4,10 @@
 
    <div class="article-title">{{ .Title }} &nbsp; <a href="https://twitter.com/share" class="twitter-share-button " data-size="small" data-count="none">Tweet</a>
  </div>
-   <p class="meta"><small>Contributed by {{range .Params.author }} {{ . }} {{ end }} &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</small></p> <hr/>
+   <p class="meta"><small>Contributed by {{range .Params.author }} {{ . }} {{ end }} &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</small></p>
+	<p class="meta"><small>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}"> {{.}}</a> &nbsp;{{end}}</p>
+	{{ if .Params.series }}<p class="meta"> Part of <a href="/series/{{.Params.series | urlize}}">{{.Params.series}}</a> </p> {{end}}
+	<hr/>
    <div class="post">
      {{ .Content }}
    </div>

@@ -4,3 +4,4 @@ title = "Gopher Academy Blog"
 disqusShortname = "gopheracademy"
 [taxonomies]
    author = "authors"
+   series = "series"
