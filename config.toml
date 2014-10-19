@@ -5,3 +5,4 @@ disqusShortname = "gopheracademy"
 [taxonomies]
    author = "authors"
    series = "series"
+   tag = "tags"

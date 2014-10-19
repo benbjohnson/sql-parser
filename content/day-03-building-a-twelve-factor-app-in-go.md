@@ -2,6 +2,7 @@
 title = "Go Advent Day 3 - Building a Twelve Factor App in Go"
 date = 2013-12-03T06:40:42Z
 author = ["Kelsey Hightower"]
+series = ["Advent 2013"]
 +++
 
 

@@ -6,12 +6,33 @@
  </div>
    <p class="meta"><small>Contributed by {{range .Params.author }} {{ . }} {{ end }} &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</small></p>
 	<p class="meta"><small>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}"> {{.}}</a> &nbsp;{{end}}</p>
-	{{ if .Params.series }}<p class="meta"> Part of <a href="/series/{{.Params.series | urlize}}">{{.Params.series}}</a> </p> {{end}}
 	<hr/>
    <div class="post">
      {{ .Content }}
-   </div>
-<p>
+ </div>
+{{ if .Params.series }}
+	{{ $link := .Permalink }}
+	{{ $name := index .Params.series 0 }}
+	<hr/>
+	<p><a href="" id="series"></a>This is a post in the <b>{{$name}}</b> series.<br/>
+	Other posts in this series:</p>
+{{ $name := $name | urlize }}
+	{{ $series := index .Site.Taxonomies.series $name }}
+	<ul class="series"> 
+	{{ range $series.Pages }}
+		<li>{{.Date.Format "Jan 02, 2006"}} - 
+		{{ if eq .Permalink $link }}
+			{{.LinkTitle}}
+		{{else}}
+			<a href="{{.Permalink}}">{{.LinkTitle}} </a>
+		{{end}}
+		</li>
+	{{end}}
+	</ul>
+{{end}} 
+
+ 
+ <p>
 {{ template "_internal/disqus.html" . }}
 </p>
  </div>
@@ -26,4 +47,4 @@
 
     </ul>
     </div>
-{{ partial "footer.html" }}
+{{ partial "footer.html" . }}

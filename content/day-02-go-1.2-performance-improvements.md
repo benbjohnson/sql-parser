@@ -3,6 +3,7 @@ title = "Go Advent Day 2 - Go 1.2 performance improvements"
 linktitle = "Go 1.2 performance improvements"
 date = 2013-12-02T06:40:42Z
 author = ["Dave Cheney"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction
