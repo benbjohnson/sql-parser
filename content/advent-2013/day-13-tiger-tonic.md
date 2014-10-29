@@ -25,7 +25,7 @@ Tiger Tonic eschews HTML templates, JavaScript and CSS asset pipelines, cookies,
 
 ### Multiplexing requests
 
-Most web services respond differently to requests for different URLs so they reach for the standard `http.ServeMux`.  Then these web services start handling requests like `POST`/games/{id}/bet` (an example from [[https://developers.betable.com][Betable]]) and `http.ServeMux` gets in the way.  [tigertonic.TrieServeMux](http://godoc.org/github.com/rcrowley/go-tigertonic#TrieServeMux) is here to help.
+Most web services respond differently to requests for different URLs so they reach for the standard `http.ServeMux`.  Then these web services start handling requests like `POST /games/{id}/bet` (an example from [Betable](https://developers.betable.com)) and `http.ServeMux` gets in the way.  [tigertonic.TrieServeMux](http://godoc.org/github.com/rcrowley/go-tigertonic#TrieServeMux) is here to help.
 
     mux := tigertonic.NewTrieServeMux()
     mux.Handle("POST", "/games/{id}/bet", handler)

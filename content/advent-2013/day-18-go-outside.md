@@ -21,7 +21,7 @@ My needs almost always involve interacting with external (hence `Outside`) funct
 
 Tackling the (initially) rather bewildering [reflect](http://golang.org/pkg/reflect) package turned out to be the reward I needed.
 
-[syscall](http://golang.org/pkg/syscall) on Windows already has `[Must]LoadDLL`, `[Must]FindProc` and `Call` to load libraries, find entry-points and call procedures.
+[syscall](http://golang.org/pkg/syscall) on Windows already has ```[Must]LoadDLL```, `[Must]FindProc` and `Call` to load libraries, find entry-points and call procedures.
 Note: Because these functions are Windows-specific, they don't show up in documentation on [golang.org](http://golang.org).
 See godoc and [syscall](http://golang.org/pkg/syscall) on reading documentation for other systems.
 Linux provides more limited (6 arguments max) [Syscall](http://golang.org/pkg/syscall/#Syscall) functions, but neither dynamic loading nor lookup. Also, the neater `Call` is missing. In `outside` similar Linux functionality has been implemented using the `dl` library and some C code.
