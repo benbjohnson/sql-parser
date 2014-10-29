@@ -2,6 +2,7 @@
 title = "Go Advent Day 12 - Inside the Go Playground"
 date = 2013-12-12T06:40:42Z
 author = ["Dave Cheney"]
+series = ["Advent 2013"]
 +++
 
 ## From-the-state's-secret-department

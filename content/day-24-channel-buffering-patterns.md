@@ -2,6 +2,7 @@
 title = "Go Advent Day 24 - Channel Buffering Patterns"
 date = 2013-12-24T06:40:42Z
 author = ["Caleb Spare"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

@@ -2,6 +2,7 @@
 title = "Go Advent Day 8 - Doctor Who and the mutant Go compilers"
 date = 2013-12-08T06:40:42Z
 author = ["Elliott Stoneham"]
+series = ["Advent 2013"]
 +++
 
 

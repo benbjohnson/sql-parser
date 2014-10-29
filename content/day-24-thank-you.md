@@ -2,6 +2,7 @@
 title = "Go Advent Day 24.5 - Thank you"
 date = 2013-12-24T11:58:42Z
 author = ["Dave Cheney", "Brian Ketelsen"]
+series = ["Advent 2013"]
 +++
 
 ## Thank you

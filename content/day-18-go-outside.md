@@ -2,6 +2,7 @@
 title = "Go Advent Day 18 - Go Outside"
 date = 2013-12-18T06:40:42Z
 author = ["Tony Wilson"]
+series = ["Advent 2013"]
 +++
 
 

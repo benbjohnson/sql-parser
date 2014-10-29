@@ -2,6 +2,8 @@
 title = "Go Advent Day 4 - GoConvey"
 date = 2013-12-04T06:40:42Z
 author = ["Matthew Holt", "Michael Whatcott"]
+tags = ["go"]
+series = ["Advent 2013"]
 +++
 
 

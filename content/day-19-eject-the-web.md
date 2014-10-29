@@ -2,6 +2,7 @@
 title = "Go Advent Day 19 - Eject the Web"
 date = 2013-12-19T06:40:42Z
 author = ["Yasuhiro Matsumoto"]
+series = ["Advent 2013"]
 +++
 
 _Editors Note:_ Yasuhiro is not a native English speaker, so during the editing of this post is was necessary to make some minor corrections. We felt that it was very important however, that the Author's original phrasing and intent be preserved as much as possible.

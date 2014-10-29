@@ -2,6 +2,7 @@
 title = "Go Advent Day 11 - Build a Christmas List with Martini"
 date = 2013-12-11T06:40:42Z
 author = ["Jeremy Saenz"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

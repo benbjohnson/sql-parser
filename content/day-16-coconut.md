@@ -2,6 +2,7 @@
 title = "Go Advent Day 16 - Coconut: a pure Go blogging engine"
 date = 2013-12-16T06:40:42Z
 author = ["Micah Nordland"]
+series = ["Advent 2013"]
 +++
 
 
