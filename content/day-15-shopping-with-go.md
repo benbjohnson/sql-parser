@@ -2,6 +2,7 @@
 title = "Go Advent Day 15 - Accelerating ecommerce with Go"
 date = 2013-12-15T06:40:42Z
 author = ["Shane M. Hansen"]
+series = ["Advent 2013"]
 +++
 
 ## Welcome

@@ -2,6 +2,7 @@
 title = "Go Advent Day 9 - Building A Weather App In Go"
 date = 2013-12-09T06:40:42Z
 author = ["William Kennedy"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

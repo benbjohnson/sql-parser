@@ -2,6 +2,7 @@
 title = "Go Advent Day 10 - Beyond Static Binaries"
 date = 2013-12-10T06:40:42Z
 author = ["Joseph Anthony Pasquale Holsten"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

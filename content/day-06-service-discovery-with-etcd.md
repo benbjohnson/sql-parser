@@ -2,6 +2,7 @@
 title = "Go Advent Day 6 - Service Discovery with etcd"
 date = 2013-12-06T06:40:42Z
 author = ["Andrew Bonventre"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

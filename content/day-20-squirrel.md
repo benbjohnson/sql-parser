@@ -2,6 +2,7 @@
 title = "Go Advent Day 20 - Go in Academia: Emulating Wireless Networks"
 date = 2013-12-20T06:40:42Z
 author = ["Song Gao"]
+series = ["Advent 2013"]
 +++
 
 

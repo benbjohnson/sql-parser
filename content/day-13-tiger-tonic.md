@@ -2,6 +2,7 @@
 title = "Go Advent Day 13 - Go web services with Tiger Tonic"
 date = 2013-12-13T06:40:42Z
 author = ["Richard Crowley"]
+series = ["Advent 2013"]
 +++
 
 ## Welcome

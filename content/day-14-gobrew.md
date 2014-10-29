@@ -2,6 +2,7 @@
 title = "Go Advent Day 14 - gobrew"
 date = 2013-12-14T06:40:42Z
 author = ["Craig Wickesser"]
+series = ["Advent 2013"]
 +++
 
 ## What is gobrew?

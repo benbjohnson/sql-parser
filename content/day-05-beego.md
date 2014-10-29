@@ -2,6 +2,7 @@
 title = "Go Advent Day 5 - An introduction to beego"
 date = 2013-12-05T06:40:42Z
 author = ["Jiahua Chen"]
+series = ["Advent 2013"]
 +++
 
 

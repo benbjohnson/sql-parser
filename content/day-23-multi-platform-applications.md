@@ -2,6 +2,7 @@
 title = "Go Advent Day 23 - Multi-Platform Applications: Architecture and Cross-Compilation"
 date = 2013-12-23T06:40:42Z
 author = ["Mitchell Hashimoto"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

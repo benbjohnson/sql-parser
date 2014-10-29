@@ -2,6 +2,7 @@
 title = "Go Advent Day 17 - Pond: a New RSS+Atom Syncing Protocol"
 date = 2013-12-17T06:40:42Z
 author = ["Arturo Vergara"]
+series = ["Advent 2013"]
 +++
 
 ## The Problem

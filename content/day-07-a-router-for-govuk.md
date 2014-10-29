@@ -2,6 +2,7 @@
 title = "Go Advent Day 7 - A Router for GOV.UK"
 date = 2013-12-07T06:40:42Z
 author = ["James Stewart"]
+series = ["Advent 2013"]
 +++
 
 

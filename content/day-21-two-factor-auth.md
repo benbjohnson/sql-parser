@@ -2,6 +2,7 @@
 title = "Go Advent Day 21 - Two Factor Authentication in Go"
 date = 2013-12-21T06:40:42Z
 author = ["Damian Gryski"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction

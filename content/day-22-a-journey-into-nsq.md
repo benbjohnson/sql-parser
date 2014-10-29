@@ -2,6 +2,7 @@
 title = "Go Advent Day 22 - A Journey Into NSQ"
 date = 2013-12-22T06:40:42Z
 author = ["Matt Reiferson"]
+series = ["Advent 2013"]
 +++
 
 ## Introduction
