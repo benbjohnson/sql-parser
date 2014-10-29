@@ -2,6 +2,7 @@
 title = "Go Advent Day 25 - Announcing GopherCon 2014 Speakers"
 date = 2013-12-25T06:40:42Z
 author = ["Gopher Academy"]
+series = ["Advent 2013"]
 +++
 
 ## Go Advent
