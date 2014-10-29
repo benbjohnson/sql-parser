@@ -10,15 +10,15 @@ At the end of 1963 the UK was in the grip of [Beatlemania](http://en.wikipedia.o
 
 Half a century later, I found myself tweeting on the parallels between my life-long favourite sci-fi show and the joys of being a gopher: 
 
-	<blockquote class="twitter-tweet" lang="en" align="center"><p>The Go language is like Dr Who&#39;s TARDIS: A small idiosyncratic exterior, conceals large-scale quality engineering. <a href="https://twitter.com/search?q=%23golang&amp;src=hash">#golang</a></p>&mdash; Elliott Stoneham (@ElliottStoneham) <a href="https://twitter.com/ElliottStoneham/statuses/403929226371289088">November 22, 2013</a></blockquote>
-	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" lang="en" align="center"><p>The Go language is like Dr Who&#39;s TARDIS: A small idiosyncratic exterior, conceals large-scale quality engineering. <a href="https://twitter.com/search?q=%23golang&amp;src=hash">#golang</a></p>&mdash; Elliott Stoneham (@ElliottStoneham) <a href="https://twitter.com/ElliottStoneham/statuses/403929226371289088">November 22, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 The TARDIS is a good metaphor for the [Go language specification](http://golang.org/ref/spec). For most languages this document would be unreadably dry, but not for Go. In fact I think it is the essence of why the language will be successful in the long term - it contains the smallest possible number of features necessary to provide the functionality required. Everything else is in the extensive libraries. 
 
 By resisting feature-bloat in the core language, Go is very easy to read. [C. A. R. Hoare](http://en.wikipedia.org/wiki/Tony_Hoare) highlighted why this is a key implementation issue: 
 
-	.blockquote <em>”There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.”</em>
+> ”There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.”
 
 Go enables the first method, even for very large code-sets. That is quality engineering.
 
@@ -34,7 +34,7 @@ As a by-product of creating the Oracle tool, the Golang team have already create
 
 The [design document](http://golang.org/s/oracle-design) for the oracle tool states that: 
 
-	.blockquote <em>“As a prerequisite to pointer analysis, the program must first be converted from typed syntax trees into a simpler, more explicit intermediate representation (IR), as used by a compiler.  We use a high-level static single-assignment (SSA) form IR in which the elements of all Go programs can be expressed using only about 30 basic instructions.”</em>
+> “As a prerequisite to pointer analysis, the program must first be converted from typed syntax trees into a simpler, more explicit intermediate representation (IR), as used by a compiler.  We use a high-level static single-assignment (SSA) form IR in which the elements of all Go programs can be expressed using only about 30 basic instructions.”
 
 It is this SSA form IR created by [go.tools/ssa](http://godoc.org/code.google.com/p/go.tools/ssa) that holds such promise for the future.
 
@@ -62,7 +62,7 @@ But the target of the translation need not be a programming language, it could b
 
 More speculatively, if the SSA form of the Go program were further analysed and re-worked, it might be possible for Go programs to run on parallel heterogeneous platforms. Maybe using [OpenCL](http://en.wikipedia.org/wiki/OpenCL), perhaps with the addition of a new Go library package to express data-parallelism. This approach might lead to even faster Go execution times for some applications.
 
-** Sonic screwdriver required
+### Sonic screwdriver required
 
 Aside from the prototype nature of parts of the current go.tools code-base, which will improve as it matures, the two biggest long-term issues are speed and standard library portability.
 

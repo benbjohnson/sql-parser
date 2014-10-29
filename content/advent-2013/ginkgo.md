@@ -72,7 +72,7 @@ Say we have a `User` object with `FirstName` and `LastName` fields and a `FullNa
 	}
 
 
-There's a lot of repetition here: each test creates a new user (`u,`err`:= user.New()`), each test checks the resulting error (`if`err`!= nil...`), and each test must manually provide a failure string `t.Errorf("Expected`'%s'`to`be`...",`fullName)`.  Moreover, the documentation power of the tests is limited: the description of each test's scenario is awkwardly stuffed into the `Test...` method name and the `if` statements need to be parsed to glean the expected behavior of `FullName`.
+There's a lot of repetition here: each test creates a new user (`u, err := user.New()`), each test checks the resulting error (`if err != nil...`), and each test must manually provide a failure string `t.Errorf("Expected '%s' to be ...", fullName)`.  Moreover, the documentation power of the tests is limited: the description of each test's scenario is awkwardly stuffed into the `Test...` method name and the `if` statements need to be parsed to glean the expected behavior of `FullName`.
 
 Go's authors propose solving the repetition problem using table-driven tests.  Here's our example recast as a table-driven test:
 
@@ -110,7 +110,7 @@ Go's authors propose solving the repetition problem using table-driven tests.  H
 	}
 
 
-Now the repetition problem is solved, but at what cost?  The test is harder to read and filled with infrastructure code that isn't about the behavior of the method being described; also, it is no longer possible to eloquently document the significance of the various edge cases.  Moreover, we are still manually rolling our own failure messages -- how do we ensure consistency and quality error messages across our test suite?  For example, the `if`err`!=`nil`{`t.Errorf(...)`}` three-line stanza appears nearly 500 times - in various forms - in Go's own test suite!
+Now the repetition problem is solved, but at what cost?  The test is harder to read and filled with infrastructure code that isn't about the behavior of the method being described; also, it is no longer possible to eloquently document the significance of the various edge cases.  Moreover, we are still manually rolling our own failure messages -- how do we ensure consistency and quality error messages across our test suite?  For example, the `if err != nil { t.Errorf(...)`}` three-line stanza appears nearly 500 times - in various forms - in Go's own test suite!
 
 ## Ginkgo and Gomega: a different testing style for Go
 

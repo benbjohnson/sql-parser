@@ -43,7 +43,7 @@ But while those phases are critical, they aren't the only hammer for each nail.
 
 ## Dependencies
 
-Presumably you know all about [``go`get`](http://golang.org/cmd/go/#hdr-Download_and_install_packages_and_dependencies) and its way of tracking packages from git, hg, svn and bzr. If you work at Google, or maintain every single one of your dependant libraries, you'll be comfortable running on HEAD from each of your dependencies. But most of us don't live in that world.
+Presumably you know all about [```go get```](http://golang.org/cmd/go/#hdr-Download_and_install_packages_and_dependencies) and its way of tracking packages from git, hg, svn and bzr. If you work at Google, or maintain every single one of your dependant libraries, you'll be comfortable running on HEAD from each of your dependencies. But most of us don't live in that world.
 
 The most low-tech approach is to use source-control submodules, and all of the above version control systems support them out of the box. Of course, I've yet to find someone (who is not a version control hacker) who actually likes submodules. Even if you do love submodules, they still don't support dependencies stored in other version control systems.
 
@@ -68,9 +68,9 @@ While working with transitive dependencies isn't perfect, it's got support for i
 
 ## Automation
 
-While plenty of folks are happy with [``go`build`](http://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies), by far the most popular way to deal with more complicated automation situations is boring old `make`. I promise your admin loves traditional `Makefile`s over `autotools`.
+While plenty of folks are happy with [```go build```](http://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies), by far the most popular way to deal with more complicated automation situations is boring old `make`. I promise your admin loves traditional `Makefile`s over `autotools`.
 
-Presumably you'll use this to wrap your favorite testing tool, from [``go`test`](http://golang.org/cmd/go/#hdr-Test_packages) to a Test-Anything tool like [`bats`](https://github.com/sstephenson/bats]).
+Presumably you'll use this to wrap your favorite testing tool, from [```go test```](http://golang.org/cmd/go/#hdr-Test_packages) to a Test-Anything tool like [`bats`](https://github.com/sstephenson/bats]).
 
 ## Deployment
 
@@ -111,24 +111,24 @@ Fortunately, it's easy to add a signal handler so you can stop accepting new req
     package main
 
     import (
-      "fmt"
-      "os"
-      "os/signal"
-      "time"
+    	"fmt"
+    	"os"
+    	"os/signal"
+    	"time"
     )
 
     func main() {
-      c := make(chan os.Signal, 1)
-      signal.Notify(c, os.Interrupt, os.Kill)
-      go func() {
-        <-c
-        fmt.Println("Received Interrupt")
-        os.Exit(1)
-      }()
+    	c := make(chan os.Signal, 1)
+    	signal.Notify(c, os.Interrupt, os.Kill)
+    	go func() {
+    		<-c
+    		fmt.Println("Received Interrupt")
+    		os.Exit(1)
+    	}()
 
-      for {
-        time.Sleep(10 * time.Second)
-      }
+    	for {
+    		time.Sleep(10 * time.Second)
+    	}
     }
 
 

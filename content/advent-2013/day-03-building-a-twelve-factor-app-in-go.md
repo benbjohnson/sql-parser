@@ -8,15 +8,15 @@ series = ["Advent 2013"]
 
 ## Introduction
 
-I’ve been writing a lot of Go code lately, but only recently discovered the [[http://12factor.net/][Twelve Factor App]] manifesto. Coming from an Operations background I really resonated with many of the topics and solutions covered by Twelve Factor. If you have not read the manifesto go check it out, I’ll wait...
+I’ve been writing a lot of Go code lately, but only recently discovered the [Twelve Factor App](http://12factor.net/) manifesto. Coming from an Operations background I really resonated with many of the topics and solutions covered by Twelve Factor. If you have not read the manifesto go check it out, I’ll wait...
 
-It’s pretty obvious there are twelve things you gotta do to build a Twelve Factor App, but in this post I’m going to focus on [[http://12factor.net/config][factor three]], which mandates that application configuration be stored in the environment. The reasons for storing configuration in the environment are outlined in the manifesto, but no longer having to manage app configuration files has me sold.
+It’s pretty obvious there are twelve things you gotta do to build a Twelve Factor App, but in this post I’m going to focus on [factor three](http://12factor.net/config), which mandates that application configuration be stored in the environment. The reasons for storing configuration in the environment are outlined in the manifesto, but no longer having to manage app configuration files has me sold.
 
 ## Application Configuration
 
 Before moving on we need to define application configuration:
 
-_“An_app’s_config_is_everything_that_is_likely_to_vary_between_deploys_(staging,_production,_developer_environments,_etc).”_
+> “An app’s config is everything that is likely to vary between deploys (staging, production, developer environments, etc).”
 
 For most applications configuration includes logging levels, port bindings, and database settings. These settings are typically stored in configuration files, for example:
 
