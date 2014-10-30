@@ -1,5 +1,6 @@
 server {
-	root /var/www;
+	listen 80 default_server;
+	root /app;
 	index index.html index.htm;
 
 	# Make site accessible from http://localhost/
