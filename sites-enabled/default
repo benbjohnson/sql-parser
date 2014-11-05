@@ -7,7 +7,7 @@ server {
 	server_name localhost;
 
 	location / {
-		include rewrite.conf
+		include rewrite.conf;
 		# First attempt to serve request as file, then
 		# as directory, then fall back to index.html
 		try_files $uri $uri/ /index.html;
