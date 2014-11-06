@@ -36,12 +36,16 @@
           <li class=""><a href="/post/">Categories</a></li>
           <li class=""><a href="/about/">About</a></li>
           
-          <div class="input-group">
-            <input type="text" class="form-control">
+          <form action="http://google.com/search" method="get">
+
+          <div class="post_search input-group">
+                  <input type="text" name="q" results="0" class="form-control">
+            <input type="hidden" name="q" value="site:blog.gopheracademy.com">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
           </div>
+      </form>
           
           </ul>
         </div><!--/.nav-collapse -->
