@@ -400,6 +400,11 @@ img
   padding-bottom:30px
 }
 
+#summary 
+{
+  font-size: 18px;
+}
+
 .user-social
 {
   color:#c4c4c4;

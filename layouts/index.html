@@ -9,7 +9,7 @@
 	      <span>
 		      <p class="lead"><a href="{{ .Permalink }}">{{ .Title }}</a>
 		      <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></p>
-		      <div class="post"><p>{{ .Summary }}</p><a href="{{ .Permalink }}">Full Article</a></div>
+		      <div class="post"><div id="summary"><p>{{ .Summary }}</p></div><a href="{{ .Permalink }}">Full Article</a></div>
 	      </span>
       <hr />
       {{ end }}
