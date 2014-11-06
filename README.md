@@ -7,22 +7,22 @@ Public Website for GopherAcademy.com
 
 1. Clone the repo
 2. Install [Hugo](http://hugo.spf13.com)
-3. Until a theme is developed, preview with an existing theme
 
-## Installing themes
+## Modifying the Layout
+
+Theme/HTML are in:
+
+    layouts/
+
+Static assets(CSS/JS) are in:
+
+	static/
+
+## Viewing the site locally
 
 In the gopheracademy-web directory:
 
-    git clone --recursive https://github.com/spf13/hugoThemes.git themes
-
-## Viewing the site
-
-In the gopheracademy-web directory:
-
-    hugo server -wD -t simple-a
+    hugo server
 
 
 View the url that Hugo provides in a browser
-
-
-
