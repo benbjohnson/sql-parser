@@ -8,7 +8,9 @@
 	<p class="meta"><small>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}"> {{.}}</a> &nbsp;{{end}}</p>
 	<hr/>
    <div class="post">
+   <div id="content-font">
      {{ .Content }}
+     </div>
  </div>
 {{ if .Params.series }}
 	{{ $link := .Permalink }}
