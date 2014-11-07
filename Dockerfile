@@ -1,4 +1,2 @@
-FROM tutum/nginx
-ADD public/ /app/
+FROM bketelsen/hugo-nginx-docker
 ADD sites-enabled/ /etc/nginx/sites-enabled/
-CMD 'nginx'
