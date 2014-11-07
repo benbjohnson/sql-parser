@@ -804,12 +804,22 @@ time
   
 }
  
- 
- .newCredit {
- 	position: absolute;
+ .newCredit{
+ 	margin-top: 60px;
  	display: block;
- 	left: 5px;
- 	bottom: 0;
- 	width: 230px;
- 	
  }
+ .newCredit p {
+ 	 font-size: 11px;
+ 	 text-align: center; 	
+ }
+ .newCredit p a {
+ 	 font-size: 12px !important;
+ 	 color:#FF4088;
+ 	 	
+ }
+ .newCredit p span {
+ 	 font-size: 12px;
+ 	 color:#ef6133;
+ 	 	
+ }
+ 
