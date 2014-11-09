@@ -2,6 +2,7 @@
 author = ["Joe Beda"]
 date = "2014-11-11T00:00:00-08:00"
 title = "Kubernetes + Go = Crazy Delicious"
+series = ["Birthday Bash 2014"]
 +++
 
 ### What is Kubernetes? And what kind of name is that?

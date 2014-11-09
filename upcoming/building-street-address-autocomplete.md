@@ -2,6 +2,7 @@
 author = ["Matt Holt"]
 date = "2014-11-18T00:00:00-06:00"
 title = "Building Street Address Autocomplete with Go"
+series = ["Birthday Bash 2014"]
 
 +++
 
