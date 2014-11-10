@@ -22,6 +22,12 @@ h1
   color:#6d7680
 }
 
+.jumbotron h1 {
+	font-size: 38px;
+	line-height: 46px;
+	padding: 0 0 25px 0;
+}
+
 h2,h3
 {
   font-weight:700
@@ -103,6 +109,11 @@ p
   border-width:10px
 }
 
+hr {
+	margin: 10px 0;
+	clear: both;
+}
+
 .sidebar-nav
 {
   position:absolute;
@@ -115,7 +126,7 @@ p
 
 .sidebar-nav li
 {
-  line-height:30px;
+  line-height:20px;
   text-indent:40px;
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:200;
@@ -230,7 +241,33 @@ pre
 #social-wrapper
 {
   color:#5c646f;
-  padding:10px 0
+  padding:10px 0px 10px 55px;
+}
+
+#social-wrapper a.icon-social {
+	opacity: 0.7;
+	-webkit-opacity: 0.7;
+	transform: all 0.3s ease-in;
+	-webkit-transform: all 0.3s ease-in;
+	width: 24px;
+	height: 24px;
+	display: block;
+	background: none top left no-repeat;
+	background-size: 24px 24px;
+	float: left;
+	padding: 5px 25px;
+}
+
+#social-wrapper a.icon-social.twitter {
+	background-image: url(../images/icon-twitter.png);
+}
+
+#social-wrapper a.icon-social.github {
+	background-image: url(../images/icon-github.png);
+}
+
+#social-wrapper a.icon-social.slack {
+	background-image: url(../images/icon-slack.png);
 }
 
 #social-wrapper a
@@ -393,6 +430,11 @@ img
   background-color:#f9f9f9;
   box-shadow:1px 1px 0 1px #e8e8e8;
   padding:10px 40px 0
+}
+
+#article > h2 {
+	font-size: 32px;
+	padding: 20px 0;
 }
 
 .post
@@ -813,8 +855,7 @@ time
  	 text-align: center; 	
  }
  .newCredit p a {
- 	 font-size: 12px !important;
- 	 color:#FF4088;
+ 	 color:#666;
  	 	
  }
  .newCredit p span {
