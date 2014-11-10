@@ -37,7 +37,7 @@ Slack has native clients for desktop and mobile devices. The features that Slack
 
 ### How can I be invited to join?
 
-GA has setup an email address, slack@gopheracademy.com. Just send your request to that email address and one of the administrators will pick it up and send you an invitation.
+GA has setup an [invite form](https://docs.google.com/forms/d/1Wk7Alq-lp9sgH3h___zMPmh4gAaghsGpnnsW0Pa_9Ik/viewform?fbzx=4754263898376949596#start=invite). Provide your full name and email address and an invite will be sent to you. We also have an email address, slack@gopheracademy.com. If the form is not working for you, send your request to that email address and one of the administrators will pick it up and send you an invitation.
 
 ### How can I become an administrator?
 
