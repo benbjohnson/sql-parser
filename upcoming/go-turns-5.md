@@ -5,7 +5,7 @@ title = "Introducing the Go Birthday Bash 2014"
 series = ["Birthday Bash 2014"]
 +++
 
-### The Go Birthday Bash
+### The Go Birthday Bash
 
 <img alt="Happy Birthday Go!"
      src=""
@@ -32,6 +32,15 @@ It was a whole community.  Weeks and months before the first day of the conferen
 
 The feeling at the end of GopherCon was one I'll always remember.  I was relieved that things went off without the public perception of a hitch.  But more importantly, I felt like the Go community took that opportunity in Denver to come together as a single entity.  It was our time to celebrate our love for Go with friends we've never met.  I hope it doesn't sound like hubris when I say that GopherCon 2014 felt like a pivotal moment in Go's history.  We certainly can't take credit for the ecosystem, the community, and the language.  But it seemed like those days were Go's coming of age.
 
+Today Erik and I use Go for every corner of our development stacks, using
+tools like [Kubernetes](http://kubernetes.io), [docker](http://www.docker.com), [CoreOS](http://coreos.com), 
+and [etcd](https://github.com/coreos/etcd).  A prime example is my startup [XOR Data Exchange](http://xor.exchange) where we use that stack combined with [crypt](https://github.com/xordataexchange/crypt) and
+[viper](https://github.com/spf13/viper) for encrypted configuration
+storage.  We serve our API with
+[net/http](http://golang.org/pkg/net/http/).  We vendor our dependencies
+with [godep](https://github.com/tools/godep), and we love every minute of
+our development process using [vim-go](https://github.com/fatih/vim-go).
+
 ### GopherCon 2015 - Announcement
 So how about those announcements?
 
@@ -48,6 +57,9 @@ We're stepping up our game this year when it comes to the venue, as well.  Gophe
 We'll be opening up the Call for Proposals soon, and making a limited number of early-bird tickets available at discounted rates.  We'll put up a new website with all the details, too.  This year we'll have more hotels available with discounted room blocks, so it should be easier than last year to find a comfortable place to stay close to the event.  There are a number of nice hotels right across the street from the Convention Center that have agreed to discounted GopherCon rates.  Those details and more will be coming within a few weeks.
 
 While GopherCon 2015 will be bigger and better than last year, we're striving to keep that feeling of community.  We want GopherCon to feel like coming home for the Gophers who travel from around the world to celebrate the language, the project, and the people that make The Go Community such a strong one.
+
+Until the GopherCon site is refreshed you can get up-to-date information by
+following @gopheracademy and @gophercon on Twitter.
 
 See you there.
 
