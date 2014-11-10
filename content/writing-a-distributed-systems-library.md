@@ -13,7 +13,7 @@ author = ["Ben Johnson"]
 In early 2013, I needed to add distributed processing and storage to my
 [open source behavioral analytics database](http://skydb.io). To my surprise,
 there were almost no libraries for distributing data. Tools like
-[[https://github.com/ha/doozerd][doozerd]] were great for building systems on
+[doozerd](https://github.com/ha/doozerd) were great for building systems on
 top of but I didn't want my database to depend on a third party server.
 
 As I began to read distributed systems research papers I began to understand
