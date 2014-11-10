@@ -7,11 +7,7 @@ series = ["Birthday Bash 2014"]
 
 ### The Go Birthday Bash
 
-<img alt="Happy Birthday Go!"
-     src=""
-     width=128 height=124
-     style="float:left; padding: 10px"/>
-Today is a special day for Go enthusiasts across the globe.  We're celebrating the 5th birthday of a programming language, and perhaps just as importantly: a community.  From the beginning, many knew Go was special.  With a [heritage](http://plan9.bell-labs.com/plan9/) [befitting](http://en.wikipedia.org/wiki/Newsqueak) [nobility](http://en.wikipedia.org/wiki/Communicating_sequential_processes), it was clear that Go was intended for big things.
+Today is a [special day](https://blog.golang.org/5years) for Go enthusiasts across the globe.  We're celebrating the 5th birthday of a programming language, and perhaps just as importantly: a community.  From the beginning, many knew Go was special.  With a [heritage](http://plan9.bell-labs.com/plan9/) [befitting](http://en.wikipedia.org/wiki/Newsqueak) [nobility](http://en.wikipedia.org/wiki/Communicating_sequential_processes), it was clear that Go was intended for big things.
 
 This month we are celebrating Go by inviting guests to post articles about how Go has made a difference in their business, in their projects, and even in their lives.  We're going to hear from the people behind projects and companies big and small; but one common thread joins them together: their love of the Go programming language.
 
