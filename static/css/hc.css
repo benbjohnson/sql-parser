@@ -103,6 +103,10 @@ p
   border-width:10px
 }
 
+hr {
+	margin: 10px 0;
+}
+
 .sidebar-nav
 {
   position:absolute;
@@ -115,7 +119,7 @@ p
 
 .sidebar-nav li
 {
-  line-height:30px;
+  line-height:20px;
   text-indent:40px;
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:200;
@@ -813,8 +817,7 @@ time
  	 text-align: center; 	
  }
  .newCredit p a {
- 	 font-size: 12px !important;
- 	 color:#FF4088;
+ 	 color:#666;
  	 	
  }
  .newCredit p span {

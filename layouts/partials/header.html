@@ -77,28 +77,25 @@
 
 		      <hr />
 			{{ range $name, $taxonomy := .Site.Taxonomies.series}}
-				<li class=""><a href="/series/{{ $name | urlize }}">{{ $name}}</a></li>
+				<li class=""><a href="/series/{{ $name | urlize }}">{{$name}}</a></li>
 			{{ end }}
           <hr />
-          <div id="social-wrapper">
-          
-          	<li> <a href="https://twitter.com/gopheracademy"><i class="fa fa-twitter-square"></i> @twitter</a></li>
-         		<li> <a href="https://github.com/gopheracademy"><i class="fa fa-github-square"></i> github</a> </li>
-         		<hr />
-         		<!-- BOTTOM CREDITS -->
-          	<span class="newCredit">
-          			<p class="text-muted ">{{ with .Site.Params.Copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}} Gopher Academy, LLC 2013
-          		   <br />
-          		   Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> 
-          		   <br />
-          		   Designed by <span >Ardan Studios</span>
-          		    {{end}}
-          		  </p>
-          	<span>
-          	<!-- / END BOTTOM CREDITS -->
-          
-         
-         </div> 
+		<div id="social-wrapper">
+			<a class="icon-social twitter" href="https://twitter.com/gopheracademy" target="_blank"></a>
+			<a class="icon-social github" href="https://github.com/gopheracademy" target="_blank"></a>
+			<a class="icon-social slack" href="https://docs.google.com/forms/d/1Wk7Alq-lp9sgH3h___zMPmh4gAaghsGpnnsW0Pa_9Ik/viewform?fbzx=4754263898376949596#start=invite" target="_blank"></a>
+		</div> 
+		<!-- BOTTOM CREDITS -->
+		<div class="newCredit">
+			<p class="text-muted ">{{ with .Site.Params.Copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}} Gopher Academy, LLC 2013
+				<br />
+				Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> 
+				<br />
+				Designed by <a href="http://www.ardanstudios.com/" target="_blank">Ardan Studios</a>
+				{{end}}
+			</p>
+		<div>
+		<!-- / END BOTTOM CREDITS -->
            
         </ul>
         
