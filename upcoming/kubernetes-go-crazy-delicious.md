@@ -12,7 +12,7 @@ series = ["Birthday Bash 2014"]
      width=128 height=124
      style="float:left; padding: 10px"/>
 [Kubernetes](http://kubernetes.io) is a container cluster management system.
-Modeled after Google's internal systems, Kneteubers (or k8s for short) allows
+Modeled after Google's internal systems, Kubernetes (or k8s for short) allows
 users to schedule the running of Docker containers over a cluster of machines.
 It is a toolset for starting, tracking and finding what work you have running
 and where it is running.
@@ -51,7 +51,7 @@ IDEs.  Refactoring stuff in Java is a breeze.  But we wanted to make it easy to
 install on a wide variety of platforms.  The heavy runtime download and install
 for Java made it less attractive along this dimension.
 
-Python is great.  We love python.  It is so easy to get something up and running
+Python is great.  We love Python.  It is so easy to get something up and running
 quickly with Python.  But the dynamic typing of Python presents challenges for
 system software.  Strong typing eliminates a whole class of errors and lets us
 concentrate on building the system we wanted.
