@@ -2,6 +2,7 @@
 author = ["Dan Carley", "Kushal Pisavadia"]
 date = "2014-11-14T00:00:00-06:00"
 title = "Using Go in government"
+series = ["Birthday Bash 2014"]
 +++
 
 When [GDS](https://gds.blog.gov.uk/) started working on

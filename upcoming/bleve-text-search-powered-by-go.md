@@ -3,6 +3,7 @@ title = "Bleve: Text Search Powered by Go"
 date = 2014-11-16T00:00:00Z
 author = ["Marty Schoch"]
 tags = ["bleve","search","text"]
+series = ["Birthday Bash 2014"]
 +++
 
 [Bleve](http://www.blevesearch.com/), a text indexing and search library for Go, is excited to be part of the celebration of the 5th birthday of Go.  Building a complete solution for indexing and search text requires integrating many different technologies.  Go, the language, the standard library, the whole ecosystem, combine to make this not only possible, but fun.
