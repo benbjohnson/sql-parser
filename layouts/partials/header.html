@@ -36,16 +36,15 @@
           <li class=""><a href="/post/">Categories</a></li>
           <li class=""><a href="/about/">About</a></li>
           
-          <form action="http://google.com/search" method="get">
+          <form name="google-search" method="get" action="http://www.google.com/search">
 
-          <div class="post_search input-group">
-                  <input type="text" name="q" results="0" class="form-control">
-            <input type="hidden" name="q" value="site:blog.gopheracademy.com">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-            </span>
-          </div>
-      </form>
+            <div class="post_search input-group">
+              <input type="hidden" name="sitesearch" value="blog.gopheracademy.com">
+              <input type="text" name="q" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+              </span>
+            </div>
           
           </ul>
         </div><!--/.nav-collapse -->
@@ -59,11 +58,11 @@
         <ul class="sidebar-nav nav nav-pills nav-stacked">
           <li class="sidebar-brand"><a href="/"><img src="/images/gopheracademy-logo.png" alt="" /></a></li>
           <hr /> 
-					<form action="http://google.com/search" method="get">
+					<form name="google-search" method="get" action="http://www.google.com/search">
 
 	          <div class="post_search input-group">
-				            <input type="text" name="q" results="0" class="form-control">
-							<input type="hidden" name="q" value="site:blog.gopheracademy.com">
+							<input type="hidden" name="sitesearch" value="blog.gopheracademy.com">
+              <input type="text" name="q" class="form-control">
 	            <span class="input-group-btn">
 	              <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 	            </span>
