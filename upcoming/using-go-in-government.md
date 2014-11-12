@@ -5,7 +5,7 @@ title = "Using Go in government"
 series = ["Birthday Bash 2014"]
 +++
 
-When [GDS](https://gds.blog.gov.uk/) started working on
+When the UK [Government Digital Service (GDS)](https://gds.blog.gov.uk/) started working on
 [GOV.UK](https://www.gov.uk/), much of it was
 [built in Ruby](https://gds.blog.gov.uk/govuk-launch-colophon/). Since
 then, we’ve used a number of different programming languages across
@@ -15,9 +15,9 @@ recently, we’ve turned to Go for some projects.
 This is a brief experience report. It’s about how we’ve used Go and
 what we feel would be useful to know for others considering it. If
 you’re more interested in reading a case study delving into the
-details of what we’ve done with Go we’ve posted on our blog about our
+details of what we’ve done with Go, we’ve posted on our blog about our
 [router](https://gdstechnology.blog.gov.uk/2013/12/05/building-a-new-router-for-gov-uk/),
-[crawler](https://gdstechnology.blog.gov.uk/2014/08/27/taking-another-look-at-gov-uks-disaster-recovery/)
+[crawler](https://gdstechnology.blog.gov.uk/2014/08/27/taking-another-look-at-gov-uks-disaster-recovery/),
 and
 [CDN acceptance test](https://gdstechnology.blog.gov.uk/2014/10/01/cdn-acceptance-testing/)
 projects.
@@ -119,7 +119,7 @@ maintainers have
 [publicly endorsed vendoring](http://golang.org/doc/faq#get_version).
 We’re looking at using
 [gom and Godep as possible solutions](https://github.com/alphagov/styleguides/blob/master/go.md#external-dependencies)
-to this problem to be more developer friendly.
+to this problem to be more developer-friendly.
 
 It doesn’t look like our usage of Go is going to decrease any time
 soon. You can read more about our experiences of Go and other
