@@ -12,7 +12,7 @@ Likewise, it's important to know when you actually need concurrency. Just becaus
 
 Fortunately with Go, it's not an all or nothing type situation.
 
-### Concurrency for Dating Mining
+### Concurrency for Data Mining
 In my case, the application was data mining various APIs with some web crawling and event logging. [Social Harvest](http://www.socialharvest.io) is a social media analytics platform re-built in Go and it does a lot of data mining and analysis.
 
 Previously Social Harvest was built using PHP and then later on parts were re-built with Node.js. Each of these languages has a different way of handling the task and it's really good to compare them. These are all very popular web languages and they all get the job done.
