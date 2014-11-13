@@ -21,7 +21,7 @@ I want to call out two features that make Go so nice to work with:
 
 ### Easy concurrency
 
-Modern languages must have a better concurrency story than “thin wrapper around the POSIX thread API”. Go’s goroutines and channels are a simple but powerful abstraction and easier to use safely than traditional threads. [Here Inspeqtor gathers the current metrics in parallel](https://github.com/mperham/inspeqtor/blob/master/inspeqtor.go#L241) for the entities it is monitoring. I’m still trying to figure out best practices for handling errors and ensuring timeouts in goroutines. Google’s [Context](http://blog.golang.org/context) pattern looks like a strong contender to solve that problem.
+Modern languages must have a better concurrency story than “thin wrapper around the POSIX thread API”. Go’s goroutines and channels are a simple but powerful abstraction and easier to use safely than traditional threads. [Here Inspeqtor gathers the current metrics in parallel](https://github.com/mperham/inspeqtor/blob/master/inspeqtor.go#L281) for the entities it is monitoring. I’m still trying to figure out best practices for handling errors and ensuring timeouts in goroutines. Google’s [Context](http://blog.golang.org/context) pattern looks like a strong contender to solve that problem.
 
 ### Full development workflow
 
