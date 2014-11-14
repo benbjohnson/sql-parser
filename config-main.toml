@@ -1,0 +1,12 @@
+baseurl = "http://www.gopheracademy.com"
+languageCode = "en-us"
+title = "Gopher Academy | Home"
+contentdir = "content"
+layoutdir = "layouts-main"
+publishdir = "public-main"
+disqusShortname = "gopheracademy"
+[taxonomies]
+   author = "authors"
+   series = "series"
+   tag = "tags"
+   category = "categories"

@@ -1,0 +1,52 @@
+{{ partial "header.html" . }}
+  <div id="article">
+  
+
+   <div class="article-title">{{ .Title }} &nbsp; <a href="https://twitter.com/share" class="twitter-share-button " data-size="small" data-count="none">Tweet</a>
+ </div>
+   <p class="meta">Contributed by <b>{{range .Params.author }} {{ . }} {{ end }}</b> &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</p>
+	<p class="meta"><small>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}"> {{.}}</a> &nbsp;{{end}}</p>
+	<hr/>
+   <div class="post">
+   <div id="content-font">
+     {{ .Content }}
+     </div>
+ </div>
+{{ if .Params.series }}
+	{{ $link := .Permalink }}
+	{{ $name := index .Params.series 0 }}
+	<hr/>
+	<p><a href="" id="series"></a>This is a post in the <b>{{$name}}</b> series.<br/>
+	Other posts in this series:</p>
+{{ $name := $name | urlize }}
+	{{ $series := index .Site.Taxonomies.series $name }}
+	<ul class="series"> 
+	{{ range $series.Pages }}
+		<li>{{.Date.Format "Jan 02, 2006"}} - 
+		{{ if eq .Permalink $link }}
+			{{.LinkTitle}}
+		{{else}}
+			<a href="{{.Permalink}}">{{.LinkTitle}} </a>
+		{{end}}
+		</li>
+	{{end}}
+	</ul>
+{{end}} 
+
+
+ <p>		
+{{ template "_internal/disqus.html" . }}		
+ </p> 
+ </div>
+
+
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+     {{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
+     {{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
+</ul>
+
+    </ul>
+    </div>
+{{ partial "footer.html" . }}
