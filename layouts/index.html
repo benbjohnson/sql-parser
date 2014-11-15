@@ -4,14 +4,17 @@
 
 
   <div class="well well-sm" id="article">
-      <h2>Posts</h2>
       {{ range .Data.Pages }}
-	      <span>
-		      <p class="lead"><a href="{{ .Permalink }}">{{ .Title }}</a>
-		      <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></p>
-		      <div class="post"><div id="content-font"><p>{{ .Summary }}</p></div><a href="{{ .Permalink }}">Full Article</a></div>
-	      </span>
-      <hr />
+	      <article>
+		      <p class="lead">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+		        <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+          </p>
+		      <div class="post">
+            <div id="content-font"><p>{{ .Summary }}</p></div>
+            <a href="{{ .Permalink }}" class="readmore">Read article...</a>
+          </div>
+	      </article>
       {{ end }}
 
 
