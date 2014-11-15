@@ -235,7 +235,7 @@ ul,ol
 
 pre
 {
-  background:#f5f5f8
+  background:#fff;
 }
 
 #social-wrapper
@@ -369,6 +369,7 @@ article div.post a.readmore {
   font-weight:400;
   color:#428bca;
   padding:25px 0 10px;
+  line-height: 36px;
 }
 
 #article-body {
@@ -828,9 +829,26 @@ time2
   margin-top: -20px;
 }
 
+.container
+{
+  width:80%;
+  padding-right:0;
+  padding:10px 5px 5px 0;
+}
+
+#article, #article-body {
+  padding: 30px 50px 10px 50px;
+  margin: 0px;
+  border-radius: 10px;
+  background: #red;
+}
+
 }
 
 @media screen and (max-width: 500px) {
+
+  
+
   #welcome-greeting h2 {
    font-size: 15px; 
    transition: all 0.2s ease 0s;
