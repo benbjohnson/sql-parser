@@ -518,6 +518,13 @@ img
 
 time
 {
+  color:#c9c9c9;
+  font-weight:100;
+  text-shadow:1px 1px #fff
+ }
+
+time2
+{
   padding-top: 10px;
   color:#c9c9c9;
   font-size: 18px;
