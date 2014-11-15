@@ -25,7 +25,7 @@
 	{{ $link := .Permalink }}
 	{{ $name := index .Params.series 0 }}
 	<hr/>
-	<p>This is a post in the <b><a href="{{.Permalink}}" id="series">{{$name}}</a></b> series.<br/>
+	<p id="series-meta">This is a post in the <b>{{$name}}</b> series.<br/>
 	Other posts in this series:</p>
 {{ $name := $name | urlize }}
 	{{ $series := index .Site.Taxonomies.series $name }}
