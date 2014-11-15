@@ -31,7 +31,7 @@ h1
 
 h2,h3
 {
-  font-weight:700
+  font-weight:500;
 }
 
 h1 a,h2 a,h3 a,h4 a
@@ -364,8 +364,8 @@ article div.post a.readmore {
 /** POST PAGE **/
 
 .article-title {
-  font-size:35px;
-  font-weight:700;
+  font-size:32px;
+  font-weight:400;
   color:#428bca;
   padding:25px 0 10px;
 }
