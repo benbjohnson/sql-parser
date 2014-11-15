@@ -518,10 +518,12 @@ img
 
 time
 {
+  padding-top: 10px;
   color:#c9c9c9;
+  font-size: 18px;
   font-weight:100;
   text-shadow:1px 1px #fff
-}
+ }
 
 .pager li > a,.pager li > span
 {
