@@ -322,17 +322,19 @@ pre
 /** ARTICLE LIST **/
 
 #article, #article-body {
+  padding: 30px 50px 10px 50px;
   margin-top: 45px;
   padding-top: 30px;
   border-radius: 10px;
+  background: #f9f9f9;
 }
 
 
 article {
   border-radius: 10px;
-  padding: 30px 50px 10px 50px;
   border-bottom: 1px solid #ededed;
-  clear: bothj;
+  padding-top: 20px;
+  clear: both;
 }
 
 article #content-font {
