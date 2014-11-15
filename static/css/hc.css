@@ -326,13 +326,13 @@ pre
   padding: 30px 50px 10px 50px;
   margin-top: 45px;
   padding-top: 30px;
-  border-radius: 10px;
-  background: #f9f9f9;
+  border-radius: 0px;
+  background: white;
 }
 
 
 article {
-  border-radius: 10px;
+  border-radius: 0px;
   border-bottom: 1px solid #ededed;
   padding-top: 20px;
   clear: both;
@@ -373,7 +373,7 @@ article div.post a.readmore {
 }
 
 #article-body {
-  background: #f9f9f9;
+  background: white;
   padding: 20px 40px 40px 40px;
 }
 
@@ -837,10 +837,10 @@ time2
 }
 
 #article, #article-body {
-  padding: 30px 50px 10px 50px;
-  margin: 0px;
-  border-radius: 10px;
-  background: #red;
+  padding: 30px 80px 10px 70px;
+  margin: -30px -80px 0px -74px;
+  border-radius: 0px;
+  background: white;
 }
 
 }
@@ -941,4 +941,12 @@ time2
  
 #series-meta {
   font-size: 14px;
+}
+
+#dat {
+  margin-top: -16px;
+}
+
+.readmore {
+  margin-top: -200px;
 }

@@ -7,12 +7,26 @@
       {{ range .Data.Pages }}
 	      <article>
 		      <p class="lead">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-		        <time2 class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time2>
+            <a href="{{ .Permalink }}" class="article-title">{{ .Title }}</a>
+
+            <div id="dat">
+
+		        <p class="meta">Contributed by <b>
+            <script type="text/javascript">
+             var arr = [];
+             {{range .Params.author }} 
+             arr.push({{ . }})
+             {{ end }}
+             document.write(arr.join(" & "));
+             </script>
+
+            </b> &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</p>
+
+            </div>
           </p>
 		      <div class="post">
-            <div id="content-font"><p>{{ .Summary }}</p></div>
-            <a href="{{ .Permalink }}" class="readmore">Read article...</a>
+            <div id="content-font"><p>{{ .Summary }}</br></br><a href="{{ .Permalink }}" class="readmore">Read article...</a></p></div>
+            
           </div>
 	      </article>
       {{ end }}
