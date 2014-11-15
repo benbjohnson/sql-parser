@@ -3,6 +3,8 @@
 
 body
 {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 26px;
   color:#2c3e50;
   background-color:#5b808d;
   width:100%;
@@ -12,8 +14,7 @@ body
 
 h1,h2,h3,h4,h5,h6
 {
-  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
-  color:#d90006
+  color:#2c3e50
 }
 
 h1
@@ -45,7 +46,6 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover
 
 p
 {
-  font-family: "Open Sans", sans-serif;
   font-weight:200
 }
 
@@ -179,7 +179,6 @@ hr {
 {
   font-weight:800;
   color:#6c7077;
-  font-family:"Helvetica Neue", helvetica, "Open Sans",sans-serif;
   font-size:1.4em;
   text-shadow:1px 1px #fff
 }
@@ -306,7 +305,6 @@ pre
 .showcase-text
 {
   font-size:3em;
-  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:bolder;
   color:#fff;
   text-align:center;
@@ -320,6 +318,78 @@ pre
   margin:0;
   padding:0 10% 30px
 }
+
+/** ARTICLE LIST **/
+
+#article, #article-body {
+  padding: 30px 50px 10px 50px;
+  margin-top: 45px;
+  padding-top: 30px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+
+article {
+  border-radius: 10px;
+  border-bottom: 1px solid #ededed;
+  padding-top: 20px;
+  clear: both;
+}
+
+article #content-font {
+  padding-bottom: 15px;
+}
+
+article p.lead {}
+
+article p.lead a{
+  font-size: 28px;
+  border: 0;
+}
+
+article p.lead time {
+  color: #bbb;
+}
+
+article:hover p.lead time {
+  color: #aaa;
+}
+
+article div.post a.readmore {
+  border: 0;
+  font-size: 16px;
+}
+
+/** POST PAGE **/
+
+.article-title {
+  font-size:35px;
+  font-weight:700;
+  color:#428bca;
+  padding:25px 0 10px;
+}
+
+#article-body {
+  background: #f9f9f9;
+  padding: 20px 40px 40px 40px;
+}
+
+#article-body h2, #article-body h3 {
+  color: #555;
+  font-size: 20px;
+  padding: 10px 0 5px;
+}
+
+#article-body #content-font img {
+  margin: 5px;
+}
+
+#article-body p.meta.author-info {
+  margin-bottom: 20px;
+}
+
+/*END POST PAGE*/
 
 #welcome-greeting
 {
@@ -394,7 +464,6 @@ pre
   border:1px solid rgba(255,255,255,.4);
   color:rgba(255,255,255,.8);
   font-weight:200;
-  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
 }
 
 .showcase-button:hover
@@ -403,14 +472,6 @@ pre
   color:rgba(255,255,255,1);
   background-color:transparent;
   transition:all .2s ease 0
-}
-
-.article-title
-{
-  font-size:35px;
-  font-weight:700;
-  color:#428bca;
-  padding-top:15px
 }
 
 .meta
@@ -425,18 +486,6 @@ img
   max-width:100%;
 }
 
-#article
-{
-  margin-bottom:30px;
-  background-color:#f9f9f9;
-  box-shadow:1px 1px 0 1px #e8e8e8;
-  padding:10px 40px 0
-}
-
-#article > h2 {
-	font-size: 32px;
-	padding: 20px 0;
-}
 
 .post
 {
@@ -470,7 +519,6 @@ img
 time
 {
   color:#c9c9c9;
-  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:100;
   text-shadow:1px 1px #fff
 }
@@ -529,7 +577,6 @@ time
 .project-container h1
 {
   font-size:3em;
-  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:bolder;
   color:#fff;
   text-align:center;
@@ -539,7 +586,6 @@ time
 .project-container p
 {
   font-weight:200;
-  font-family:"Helvetica Neue", helvetica, "Open Sans",sans-serif;
   color:#fff;
   text-align:center;
   left-padding:20%
@@ -598,7 +644,6 @@ time
 
 .user-card h1
 {
-  font-family:"Helvetica Neue", helvetica, "Open Sans",sans-serif;
   font-weight:bolder;
   font-size:2.5em;
   line-height:55px;

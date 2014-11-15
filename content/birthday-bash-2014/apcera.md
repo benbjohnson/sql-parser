@@ -5,8 +5,6 @@ title = "How Continuum ended up being written in Go"
 series = ["Birthday Bash 2014"]
 +++
 
-### How Continuum ended up being written in Go
-
 <img alt="Continuum Logo"
      src="/postimages/apcera/continuum-logo.png"
      width=128 height=128
