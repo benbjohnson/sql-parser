@@ -534,6 +534,7 @@ time2
 
 .pager li > a,.pager li > span
 {
+  font-size: 16px;
   border-radius:.5em
 }
 
