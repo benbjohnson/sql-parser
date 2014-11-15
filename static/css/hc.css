@@ -99,7 +99,7 @@ p
   margin-left:-250px;
   left:250px;
   width:250px;
-  background:#f8f8f8;
+  background:white;
   position:fixed;
   height:100%;
   overflow-y:auto;
@@ -129,18 +129,18 @@ hr {
 {
   line-height:20px;
   text-indent:40px;
-  font-family: "Open Sans", sans-serif;
-  font-weight:200;
-  color:#9c9c9c;
- 
+  letter-spacing: .5px;
+  color: #333;
+  font-weight: 400;
  
 }
 
 .sidebar-nav li a
 {
-  color:#999;
+  color:#333;
   display:block;
   text-decoration:none
+
 }
 
 .sidebar-nav li a:hover
@@ -148,8 +148,8 @@ hr {
   color:#fff;
   background:#ee6b5e;
   text-decoration:none;
-  transition:all .2s ease 0;
- 
+  transition:all .4s ease 0;
+
 }
 
 .sidebar-nav li a:active,.sidebar-nav li a:focus
