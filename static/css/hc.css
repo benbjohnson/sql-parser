@@ -140,16 +140,16 @@ hr {
 {
   color:#333;
   display:block;
-  text-decoration:none
+  text-decoration:none;
 
 }
 
 .sidebar-nav li a:hover
 {
-  color:#fff;
-  background:#ee6b5e;
-  text-decoration:none;
-  transition:all .4s ease 0;
+  color: red;
+  
+  text-decoration:underline;
+  transition:color .6s ease 0;
 
 }
 
