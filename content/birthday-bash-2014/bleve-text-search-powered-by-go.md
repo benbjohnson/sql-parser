@@ -7,6 +7,7 @@ series = ["Birthday Bash 2014"]
 +++
 
 [Bleve](http://www.blevesearch.com/), a text indexing and search library for Go, is excited to be part of the celebration of the 5th birthday of Go.  Building a complete solution for indexing and search text requires integrating many different technologies.  Go, the language, the standard library, the whole ecosystem, combine to make this not only possible, but fun.
+<!--more-->
 
 Let's start by taking a look at a quick indexing example in Bleve:
 
