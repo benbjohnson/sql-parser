@@ -10,14 +10,36 @@ body
  /* border-top:10px solid #f36d5b; */
 }
 
-.jumbotron {
+.jumbo {
 	background-color: #F7F7F7;
 	margin-top: -20px;
-	padding-left:10%;
+	height: 270px;
+	padding-top: 30px;
 }
 
-#logo {
-	padding-left: 8px;
+.huge {
+	padding-left: 0px;
+}
+
+.logo {
+	padding-left: 10%;
+	left: 20px;
+	width: 320px;
+}
+
+.moto {
+	margin-left: 5%;
+}
+
+.verybig {
+	font-size: 40px;
+}
+
+.prettybig {
+	font-size: 24px;
+	padding-top: 10px;
+	color: #636363;
+	line-height: 34px;
 }
 
 #orange {
@@ -56,6 +78,23 @@ body
 	position: relative;
 	right: 10%;
 }
+
+@media (max-width:1200px) {
+
+.verybig {
+	font-size: 36px;
+}
+
+.prettybig {
+	font-size: 20px;
+	padding-top: 10px;
+	color: #636363;
+	line-height: 34px;
+}
+
+}
+
+
 
 
 @media (max-width:767px) {
