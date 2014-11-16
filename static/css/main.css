@@ -1,18 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+
+body
+{
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 28px;
+  color:#2c3e50;
+  background-color:white;
+  width:100%;
+ /* border-top:10px solid #f36d5b; */
+}
+
+.jumbotron {
+	background-color: #F7F7F7;
+	margin-top: -20px;
+	padding-left:10%;
+}
+
+#logo {
+	padding-left: 8px;
+}
+
+#orange {
+	color: #D67947;
+}
+
+.lynx {
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
 .navbar-default a:hover {
     color: white;
 }
 
 .navbar-default .navbar-brand {
-    color: white;
 }
 
 .navbar-default {
-    background-color: #f36d5b;
-
+    background-color: white;
+    border-bottom: 1px solid #ececec;
+    height: 70px;
+    padding-top: 10px;
 }
 
 .navbar-brand  {
     color: red;
-    font-size: 38px;
-    font-family: 'Grand Hotel', cursive;
+    font-size: 24px;
+    
+    letter-spacing: 1px;
+    position: absolute;
+    left: 10%;
+}
+
+.navbar-right {
+	position: relative;
+	right: 10%;
+}
+
+
+@media (max-width:767px) {
+
+.jumbotron {
+	display: none;
+}
+
+.navbar-brand  {
+    color: red;
+    font-size: 24px;
+    font-family: 'Roboto', Helvetica, Arial, sans serif;
+    position: absolute;
+    left: 10px;
+}
+
+.navbar-right {
+	position: relative;
+	left: 10px;
+}
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+
+}
+
+
+
+mark {
+    background-color: #ececec;
+    color: black;
+    padding-left: 3px;
+    padding-right: 1px;
+}
+
+mark:hover {
+	background-color: #333;
+	color: white;
+	transition:all .2s ease 0
 }
