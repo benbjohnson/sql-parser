@@ -43,26 +43,17 @@
     </div>
 
     <div class="col-md-6 boxy2">
-    	<h3>Birthday Bash Series</h3></br>
-{{ range first 5 (where .Data.Pages "birthday-bash-2014" "apcera") }}
-            <a href="{{ .Permalink }}" class="article-title">{{ .Title }}</a>
+    	<h3>Go Resources</h3></br>
+    		<a href="http://golang.org" class="resources">golang.org</a></br>
+    		<a href="http://golang.org/doc/" class="resources">Go Documentation</a></br>
+    		<a href="http://tour.golang.org/#1" class="resources">A Tour of Go</a></br>
+			<a href="http://golang.org/doc/code.html" class="resources">How To Write Go Code</a></br>
+    		<a href="http://golang.org/doc/effective_go.html" class="resources">Effective Go</a></br>
+    </div>
 
-            <div id="dat">
 
-		        <p class="meta">By
-            <script type="text/javascript">
-             var arr = [];
-             {{range .Params.author }} 
-             arr.push({{ . }})
-             {{ end }}
-             document.write(arr.join(" & "));
-             </script>
-             on&nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</p>
-
-            </div>
-
-		
-      {{ end }}
+    <div class="col-md-6 boxy2">
+    	<h3>Join Us On Slack</h3></br>
 
     </div>
 

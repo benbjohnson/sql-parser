@@ -10,6 +10,7 @@ body
  /* border-top:10px solid #f36d5b; */
 }
 
+
 .container {
 	width: 1100px;
 }
@@ -23,10 +24,13 @@ body
 
 .footerjumbo {
 	background-color: #F7F7F7;
-	bottom:0px;
+
 	height: 270px;
 	width: 100%;
-	margin-top: 40px;
+	position: relative;
+		bottom:0px;
+	margin-bottom: 0px;
+	padding: 40px;
 
 }
 
@@ -62,6 +66,8 @@ body
 .lynx {
 	font-size: 16px;
 	letter-spacing: 1px;
+	overflow-y:auto;
+  z-index:1000;
 }
 
 .navbar-default a:hover {
@@ -96,14 +102,6 @@ body
 .row-centered {
     text-align:center;
 }
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
 
 
 .boxy {
@@ -131,7 +129,12 @@ body
 }
 
 .article-title {
-	font-size: 22px
+	font-size: 22px;
+}
+
+.resources {
+	font-size: 22px;
+	line-height: 40px;
 }
 
 @media (max-width:1200px) {
@@ -171,13 +174,36 @@ body
 }
 
 
+.boxy {
+	width: 96%;
+	margin-left: 2%;
+	border: 1px solid #ececec;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.boxy2 {
+	width: 96%;
+	margin-left: 2%;
+	border: 1px solid #ececec;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.boxy3 {
+	width: 96%;
+	margin-left: 2%;
+	border: 1px solid #ececec;
+	padding: 20px;
+	margin-top: 40px;
+}
+
 }
 
 
 @media (max-width:767px) {
 
 .jumbo {
-	display: none;
 }
 
 .navbar-brand  {
@@ -205,10 +231,35 @@ body
 }
 
 .logo {
-	padding-left: 1%;
-	left: 10px;
+	padding-left: 30%;
+	left: 0px;
 	width: 320px;
 }
+
+.boxy {
+	width: 100%;
+	margin-left: 0px;
+	border: 1px solid #ececec;
+	padding: 30px;
+	margin-top: 40px;
+}
+
+.boxy2 {
+	width: 100%;
+	margin-left: 0px;
+	border: 1px solid #ececec;
+	padding: 30px;
+	margin-top: 40px;
+}
+
+.boxy3 {
+	width: 100%;
+	margin-left: 0px;
+	border: 1px solid #ececec;
+	padding: 30px;
+	margin-top: 40px;
+}
+
 
 }
 
