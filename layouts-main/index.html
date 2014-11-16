@@ -16,6 +16,47 @@
 
 
 
+<div class="container-fluid">
+	<div class="col-md-6 boxy">
+    <h3>From Our Blog</h3></br>
+
+    {{ range first 5 .Data.Pages }}
+            <a href="{{ .Permalink }}" class="article-title">{{ .Title }}</a>
+
+            <div id="dat">
+
+		        <p class="meta">By
+            <script type="text/javascript">
+             var arr = [];
+             {{range .Params.author }} 
+             arr.push({{ . }})
+             {{ end }}
+             document.write(arr.join(" & "));
+             </script>
+             on&nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</p>
+
+            </div>
+
+		
+      {{ end }}
+
+    </div>
+
+    <div class="col-md-6 boxy2">
+    		<a class="twitter-timeline" href="https://twitter.com/hashtag/golang" data-widget-id="533924451046268928">#golang Tweets</a> 
+    </div>
+
+</div>
+</br>
+
+<div class="container-fluid">
+	<div class="col-md-6 boxy3">
+    <p>Bacon ipsum dolor amet sausage turkey tongue, spare ribs swine drumstick fatback kielbasa ham pork picanha tri-tip bresaola filet mignon. Corned beef meatball alcatra sausage rump pork biltong boudin tongue porchetta brisket. Ground round ham hock venison turkey bresaola pork belly short ribs meatball pancetta landjaeger fatback strip steak. Strip steak pancetta cow chuck. Doner landjaeger strip steak rump fatback. Tenderloin flank pancetta, tri-tip meatball short loin frankfurter cow beef ribs pork loin drumstick prosciutto andouille shankle ham.</h3></br>
+    </p>
+</div>
+
+
+
   {{ partial "footer.html" . }}
   </div>
  	

@@ -97,6 +97,34 @@ body
 }
 
 
+.boxy {
+	width: 39%;
+	margin-left: 11%;
+	border: 1px solid #ececec;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.boxy2 {
+	width: 39%;
+	margin-left: 1%;
+	border: 1px solid #ececec;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.boxy3 {
+	width: 78%;
+	margin-left: 11%;
+	border: 1px solid #ececec;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.article-title {
+	font-size: 22px
+}
+
 @media (max-width:1200px) {
 
 .verybig {
