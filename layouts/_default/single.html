@@ -4,7 +4,7 @@
 
    <div class="article-title">{{ .Title }} &nbsp; <a href="https://twitter.com/share" class="twitter-share-button " data-size="small" data-count="none">Tweet</a>
  </div>
-   <p class="meta">Contributed by 
+   <p class="meta">Contributed by <mark>
 <script type="text/javascript">
  var arr = [];
  {{range .Params.author }} 
@@ -12,7 +12,7 @@
  {{ end }}
  document.write(arr.join(" & "));
  </script>
-
+</mark>
     &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</p>
 	<p class="meta"><small>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}"> {{.}}</a> &nbsp;{{end}}</p>
 	<hr/>
@@ -25,7 +25,7 @@
 	{{ $link := .Permalink }}
 	{{ $name := index .Params.series 0 }}
 	<hr/>
-	<p id="series-meta">This is a post in the <b>{{$name}}</b> series.<br/>
+	<p id="series-meta">This is a post in the <mark>{{$name}}</mark> series.<br/>
 	Other posts in this series:</p>
 {{ $name := $name | urlize }}
 	{{ $series := index .Site.Taxonomies.series $name }}

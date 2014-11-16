@@ -6,10 +6,9 @@ body
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 28px;
   color:#2c3e50;
-  background-color:#5b808d;
+  background-color:white;
   width:100%;
-  border-top:solid #f36d5b;
-  border-width:10px
+ /* border-top:10px solid #f36d5b; */
 }
 
 h1,h2,h3,h4,h5,h6
@@ -52,6 +51,7 @@ p
 
 .posts
 {
+  margin-left: -40px;
   font-size:20px;
   list-style:none;
   font-weight:lighter;
@@ -73,7 +73,7 @@ p
 
 .container a
 {
-  border-bottom:1px #8a8a8a dotted;
+  border-bottom:1px #ececec solid;
   text-decoration:none
 }
 
@@ -91,7 +91,7 @@ p
 .navbar a 
 {
   text-decoration: none;
-  border-bottom: 1px #b1b1b1 solid;
+  border-bottom: 0px #b1b1b1 solid;
 }
 
 #sidebar-wrapper
@@ -105,9 +105,9 @@ p
   overflow-y:auto;
   z-index:1000;
   margin-top:-10px;
-  border-top:solid #f36d5b;
+ /* border-top:10px solid #f36d5b; */
   transition:all .4s ease 0;
-  border-width:10px
+  border-right:1px solid #e3e3e3;
 }
 
 hr {
@@ -132,6 +132,7 @@ hr {
   letter-spacing: .5px;
   color: #333;
   font-weight: 400;
+  font-size: 16px;
  
 }
 
@@ -323,7 +324,6 @@ pre
 /** ARTICLE LIST **/
 
 #article, #article-body {
-  padding: 30px 50px 10px 50px;
   margin-top: 45px;
   padding-top: 30px;
   border-radius: 0px;
@@ -345,7 +345,7 @@ article #content-font {
 article p.lead {}
 
 article p.lead a{
-  font-size: 28px;
+  font-size: 32px;
   border: 0;
 }
 
@@ -374,7 +374,7 @@ article div.post a.readmore {
 
 #article-body {
   background: white;
-  padding: 20px 40px 40px 40px;
+  padding: 20px 40px 40px 0px;
 }
 
 #article-body h2, #article-body h3 {
@@ -800,7 +800,6 @@ time2
 }
 
 #sidebar-wrapper {
-    border-right: 4px solid #d90006;
     border-top: none;
     left: 0px;
 }
@@ -825,7 +824,7 @@ time2
 .navbar 
 {
   display: inherit;
-  background-color: #ededed;
+  background-color: #fff;
   margin-top: -20px;
 }
 
@@ -837,15 +836,15 @@ time2
 }
 
 #article, #article-body {
-  padding: 30px 80px 10px 70px;
-  margin: -30px -80px 0px -74px;
+  padding: 30px 50px 10px 70px;
+  margin: -30px -50px 0px -74px;
   border-radius: 0px;
   background: white;
 }
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
 
   
 
@@ -945,8 +944,28 @@ time2
 
 #dat {
   margin-top: -16px;
+  font-size: 14px;
 }
 
 .readmore {
   margin-top: -200px;
+}
+
+.well {
+  border: none;
+}
+
+mark {
+    background-color: #ececec;
+    color: black;
+    padding-left: 3px;
+    padding-right: 1px;
+}
+
+.well {
+  box-shadow: none;
+}
+
+.smallmenu {
+  font-size: 16px;
 }

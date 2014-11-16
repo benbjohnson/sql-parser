@@ -33,10 +33,28 @@
         
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav ">
-          <li class=""><a href="/post/">#golang Jobs</a></li>
-          <li class=""><a href="/post/">Categories</a></li>
-          <li class=""><a href="/about/">About</a></li>
+          <li class="smallmenu"><a  href="/post/">Categories</a></li>
+          <li class="smallmenu"><a href="http://www.gopheracademy.com">Gopher Academy</a></li>
+          <li class="smallmenu"><a href="http://www.gophercon.com">GopherCon</a></li> 
           
+          <hr />
+      {{ range $name, $taxonomy := .Site.Taxonomies.series}}
+      <script type="text/javascript">
+        function titleize(slug) {
+            var words = slug.split("-");
+            return words.map(function(word) {
+                return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
+            }).join(' ');
+        }
+        var str = "{{$name}}";
+        var str2 = titleize(str)
+        document.write('<li class="smallmenu"><a href="/series/{{ $name | urlize }}">');
+        document.write(str2);
+        document.write('</a></li>');
+      </script>
+        
+      {{ end }}
+
           <form name="google-search" method="get" action="http://www.google.com/search">
 
             <div class="post_search input-group">

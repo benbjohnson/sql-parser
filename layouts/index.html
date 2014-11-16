@@ -11,7 +11,7 @@
 
             <div id="dat">
 
-		        <p class="meta">Contributed by 
+		        <p class="meta">Contributed by <mark>
             <script type="text/javascript">
              var arr = [];
              {{range .Params.author }} 
@@ -19,13 +19,13 @@
              {{ end }}
              document.write(arr.join(" & "));
              </script>
-
+             </mark>
              &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</p>
 
             </div>
           </p>
 		      <div class="post">
-            <div id="content-font"><p>{{ .Summary }}</br></br><a href="{{ .Permalink }}" class="readmore">Read article...</a></p></div>
+            <div id="content-font"><p>{{ .Summary }}</br></br><a href="{{ .Permalink }}" class="readmore">Read more...</a></p></div>
             
           </div>
 	      </article>

@@ -1,9 +1,24 @@
 {{ partial "header.html" . }}
   <div id="article">
-      <h1>{{.Title}}</h1>
+      <h1>{{.Title}}</h1></br>
   <ul class="posts">
       {{ range .Data.Pages.ByDate }}
-      <li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
+      <li><span><a href="{{ .Permalink }}">{{ .Title }}</a></br>
+
+                  <div id="dat">
+
+		        <div class="meta">Contributed by <mark>
+            <script type="text/javascript">
+             var arr = [];
+             {{range .Params.author }} 
+             arr.push({{ . }})
+             {{ end }}
+             document.write(arr.join(" & "));
+             </script>
+             </mark>
+             on &nbsp;<i class="fa fa-calendar-o"></i> {{ .Date.Format  "2006-01-02" }}</div>
+
+            </div>
       {{ end }}
   </ul>
 {{ partial "footer.html" . }}
