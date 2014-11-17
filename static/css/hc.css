@@ -256,7 +256,7 @@ pre
 	background: none top left no-repeat;
 	background-size: 24px 24px;
 	float: left;
-	padding: 5px 25px;
+	padding: 5px 24px;
 }
 
 #social-wrapper a.icon-social.twitter {
@@ -269,6 +269,10 @@ pre
 
 #social-wrapper a.icon-social.slack {
 	background-image: url(../images/icon-slack.png);
+}
+
+#social-wrapper a.icon-social.rss {
+	background-image: url(../images/icon-rss.png);
 }
 
 #social-wrapper a
