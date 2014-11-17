@@ -52,25 +52,25 @@ ENOMORECOMPLAINING
 
 What we love:
 
-* Static binaries and easy cross compilation
+* **Static binaries and easy cross compilation**
 
   We can run one command and generate a client and server binary for Linux, Windows, and Mac that includes our server, our client, our database, an agent, our admin tools, etc, etc, etc.  It's 22 megabytes.  It just works everywhere.  Thank you, Go.  Thank you.
 
-* Write code that everyone can read
+* **Write code that everyone can read**
 
   Idiomatic Go (after a while) all starts to look the same, and that’s a good thing.  Reviewing large amounts of Go code comes easier to many of us - there’s less syntax to keep in your head and fewer ways to express the same concepts.  Metaprogramming is a lot of fun but having to debug the awesomely elegant language extension you cooked up six months ago when you have a critical bug today is a lot less fun.  Boring… but predictable.
 
-* Compose, don’t inherit
+* **Compose, don’t inherit**
 
   Having to learn to write object-oriented code without using inheritance was a shock. But Go makes it easy to declare interfaces on the fly (interfaces match any object that has the same methods defined) and easy to compose interfaces with embedding.  In a statically typed language, unit testing is heavily dependent on composition of interfaces, which has the side benefit of letting you spend more time looking at the code in between the interfaces and how they transform their inputs and outputs.  It's not often you can stop using a fundamental feature of (most) programming languages and realize you don't miss it.
 
-* A small language that compiles fast makes for a happy developer
+* **A small language that compiles fast makes for a happy developer**
 
-The Go language is small, compiles really fast, and as a result it lets your mind focus on the actual problem and less on the tool you are using to solve it.  Code, test, debug cycles are so quick that you forget you are not working with an interpreted language.  Looking at our code, you see less boilerplate and more business logic.  Type marshalling, concurrency, and defer style control flow keeps the code clean and compact.  We miss ternary operators, but we will survive.
+  The Go language is small, compiles really fast, and as a result it lets your mind focus on the actual problem and less on the tool you are using to solve it.  Code, test, debug cycles are so quick that you forget you are not working with an interpreted language.  Looking at our code, you see less boilerplate and more business logic.  Type marshalling, concurrency, and defer style control flow keeps the code clean and compact.  We miss ternary operators, but we will survive.
 
-* The Golang community
+* **The Golang community**
 
-We had to get changes into the golang project to support a user namespaces feature for Docker.  Once code review started, things moved very fast, and the reviewers were friendly and worked to help get the fix in.  Whether working on the core language, or many of the extended libraries, the Go community is open by default.  Even though Go is still young, we’ve been able to build on top of a great (and surprisingly extensive) set of libraries and tools.
+  We had to get changes into the golang project to support a user namespaces feature for Docker.  Once code review started, things moved very fast, and the reviewers were friendly and worked to help get the fix in.  Whether working on the core language, or many of the extended libraries, the Go community is open by default.  Even though Go is still young, we’ve been able to build on top of a great (and surprisingly extensive) set of libraries and tools.
 
 
 The undiscovered country
