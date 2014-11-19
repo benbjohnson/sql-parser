@@ -5,7 +5,7 @@ title = "Updating your Go packages with Go Package Store"
 series = ["Birthday Bash 2014"]
 +++
 
-Go Package Store is an app that displays updates for the Go packages in your GOPATH. Why another way to update Go packages when you can already just do `go get -u`, you might think. In true Go tradition, Go Package Store doesn't try to replace what already exists. Instead, it uses composition to augment it. In the end, Go Package Store simply uses the `os/exec` package to execute `go get -u` for you (which is why it's safe to run). But its goal is to make that experience more delightful and informative.
+[Go Package Store](https://github.com/shurcooL/Go-Package-Store#go-package-store) is an app that displays updates for the Go packages in your GOPATH. Why another way to update Go packages when you can already just do `go get -u`, you might think. In true Go tradition, Go Package Store doesn't try to replace what already exists. Instead, it uses composition to augment it. In the end, Go Package Store simply uses the `os/exec` package to execute `go get -u` for you (which is why it's safe to run). But its goal is to make that experience more delightful and informative.
 
 ![Go Package Store Screenshot](/postimages/updating-your-go-packages-with-go-package-store/go-package-store.png)
 
@@ -43,7 +43,7 @@ One recent addition to Go Package Store was clickable links for each commit.
 
 Sometimes, when seeing an interesting commit message, I found myself wanting to learn more about it, or look at the actual code change (perhaps to review it, or decide if I want to update right away). Being able to get to a commit with just one click has been very helpful for that.
 
-This is just another example of how Go Package Store can evolve and become better. With that said, there's currently a PR to [add detailed change support](https://github.com/shurcooL/Go-Package-Store/pull/25) for all Go packages hosted on azul3d.org. It already supports GitHub and code.google.com repositories. But if you run into any issues or want to help make it better, Go Package Store is open source, so feel free to contribute!
+This is just another example of how Go Package Store can evolve and become better. With that said, there's currently a PR to [add detailed change support](https://github.com/shurcooL/Go-Package-Store/pull/25) for all Go packages hosted on azul3d.org. It already supports GitHub and code.google.com repositories. But if you run into any issues or want to help make it better, Go Package Store [is open source](https://github.com/shurcooL/Go-Package-Store), so feel free to contribute!
 
 ### Conclusion
 
