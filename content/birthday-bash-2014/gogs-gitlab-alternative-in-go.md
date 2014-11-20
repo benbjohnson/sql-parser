@@ -49,6 +49,6 @@ For Gogs, our goal is not just to make it easy to install, but easy to upgrade a
 
 ### Future
 
-It is true that Gogs is a new star and leaks some features, most importantly, its ecosystem. But it is what we're hardly working on, to develop more features users need, and more integrations users love.
+It is true that Gogs is a new star and lacks some features, most importantly, its ecosystem. But it is what we're hardly working on, to develop more features users need, and more integrations users love.
 
 In the end, I want to thank you, Go, love you at first sight, and happy 5th birthday! 
