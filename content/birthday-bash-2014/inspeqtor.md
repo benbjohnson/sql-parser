@@ -1,7 +1,7 @@
 +++
 author = ["Mike Perham"]
 date = "2014-11-21T00:00:00-06:00"
-title = "Why Go?"
+title = "Inspeqtor"
 series = ["Birthday Bash 2014"]
 
 +++
