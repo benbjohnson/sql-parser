@@ -360,17 +360,6 @@ nature of Go, extending and improvement the Kite library was easy too.
 I hope you get the idea and intention of this library and what it can and
 can't. We are using and maintaining it extensively. However there are many
 things we want to improve too (such as providing other message protocols and
-transport protocols). Feel free to fork the project and play around.
-Contributions are welcome! Please let me know what you think of it. 
-
-
-
-
-
-
-
-
-
-
-
-
+transport protocols). Feel free to fork the project
+(https://github.com/koding/kite) and play around.  Contributions are welcome!
+Please let me know what you think of it. 
