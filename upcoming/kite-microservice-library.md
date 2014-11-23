@@ -349,7 +349,7 @@ the box, that can be used to multiplex kites behind a single port/app. It's bein
 used in production by Koding so it has many performance based fixes and
 improvements by default.  
 
-Writing Kites and using it is the most important part. Once you startto
+Writing Kites and using it is the most important part. Once you start to
 use it, you can feel the simplicity of the API. The Kite library
 is easy to use because it shares the same philosophy as Go. It uses some of the
 best open source projects written in Go (such as etcd). Go made it simple to
