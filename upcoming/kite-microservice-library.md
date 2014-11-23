@@ -1,6 +1,6 @@
 +++
 author = ["Fatih Arslan"]
-date = "2014-11-24T00:00:00-06:00"
+date = "2014-11-23T00:00:00-06:00"
 title = "Kite: Library for writing distributed microservices"
 series = ["Birthday Bash 2014"]
 +++
