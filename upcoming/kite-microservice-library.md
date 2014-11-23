@@ -11,11 +11,11 @@ series = ["Birthday Bash 2014"]
      style="float:left;"/>
 
 Writing web services with Go is super easy. The simple but powerful `net/http` package
-let you write performance web services in a very quick way. However sometimes
-all you want is write a RPC backend application. Basically you want to have
+lets you write performant web services in a very quick way. However sometimes
+all you want is to write a RPC backend application. Basically you want to have
 many independent worker applications that are running separately, each with
 their own responsibility of doing certain tasks. They should accept requests
-and reply to them with a certain response. 
+and reply to them with a well defined response.
 
 This is obvious, however it's getting difficult once you go beyond simple
 requirements. In real world scenarios you are going to have hundreds of applications
@@ -30,8 +30,8 @@ application, just like a DNS server.
 
 So building a distributed system with many applications is becoming hard. The
 [Kite](https://github.com/koding/kite) library development started within
-[Koding](https://koding.com/), but in a short it was open sourced. The main
-goal is to create easy, simple and convenient to use distributed microservice
+[Koding](https://koding.com/), but it was quickly open sourced. The main
+goal is to create easy, simple, and convenient to use distributed microservice
 applications. The Kite library itself has many detailed parts, so in this blog
 post I'll try to give an overview of what a Kite is capable of.
 
@@ -60,36 +60,36 @@ others.
 
 Kite uses [SockJS](https://github.com/sockjs/sockjs-client) to provide a
 WebSocket emulation over many different transports (websocket, xhr, etc..). So
-that means, you can connect to Kite from a browser too (for that we have our
+that means you can connect to Kite from a browser too (see our
 excellent [Kite.js](https://github.com/koding/kite.js)). Kite uses a modified
 [dnode protocol](https://github.com/substack/dnode-protocol) for RPC messaging.
 The Kite protocol adds an additional session and authentication layer, so it
-can be used to identifies Kites easily. It uses under the hood JWT for
+can be used to identifies Kites easily. Under the hood it uses JWT for
 authentication and session information.
 
-A Kite can discover other kites using a service called Kontrol to communicate
-with other kites securely and authenticated. In order to use the service
-discovery a Kite can register itself to Kontrol. This is totally optional but
+A Kite can discover other kites using a service discovery mechanism called Kontrol to communicate
+with other kites securely and with authentication. In order to use service
+discovery a Kite can register itself with Kontrol. This is optional but
 it's encouraged and heavily reflected in the [Kite
 API](http://godoc.org/github.com/koding/kite). 
 
-`Kontrol` is a server running responsible for service discovery of kites. It
+`Kontrol` is a service discovery mechanism for kites. It
 controls and keeps track of kites and provides a way to authenticate kite
 users, so they can securely talk with each other. Kontrol uses
 [etcd](https://github.com/coreos/etcd) for backend storage, however it can be
-changed with others too (currently there is also support for
+replaced with others too (currently there is also support for
 [PostgreSQL](http://www.postgresql.org/)).  Anything that satisfies the
 [kontrol.Storage](http://godoc.org/github.com/koding/kite/kontrol#Storage)
-interface can be used as backend storage. Kontrol also has many ways of
-authenticating users. It is customizable so people can use their own way of
+interface can be used as backend storage, thanks to the flexibility of Go's interfaces. 
+Kontrol also has many ways of authenticating users. It is customizable so people can use their own way of
 Kontrol. 
 
 # How to use a Kite
 
 Now let's dive in. Even more interesting is writing and using Kite. It's fun to
 write a Kite and let them talk to each other. First let me show you a Kite in
-the most simplest form (for sake of simplicity I'm neglecting errors, but
-please don't do it :))
+the most simple form (for sake of simplicity I'm ignoring errors, but
+please don't do that :))
 
 ```
 package main
@@ -102,15 +102,15 @@ func main() {
 }
 ```
 
-Here we basically just created a kite with the name **first** and version
+Here we just created a kite with the name **first** and version
 **1.0.0**. The `Run()` method is running a server, which is blocking (just like
-http.Serve). This kite is now capable of receiving requests from other.
-Because no port number is assigned the OS has picked for us automatically.
+http.Serve). This kite is now capable of receiving requests.
+Because no port number is assigned the OS has picked one for us automatically.
 
-Let us assign a port now, so we can connect to it from another kite. Kite
+Let us assign a port now, so we can connect to it from another kite 
 (otherwise you need to pick the assigned URL from the logs). To change the
 configuration of a Kite, such as Port number, the properties (such as
-Environment, Region, etc... Just change the `Config` field:
+Environment, Region, etc... you'll need to modify the `Config` fields:
 
 ```
 package main
@@ -152,9 +152,9 @@ This time we connect to a new kite directly because we know the URL already.
 As a RPC system you need have a concept of URL paths. Kite uses simple method
 names, so it can be called by others. Each method is associated with a certain
 handle (just like a http.Handler) The kite library has some default methods,
-one of them is the `kite.ping` method which basically just returns a `pong`
+one of them is the `kite.ping` method which returns a `pong`
 string as a response (it doesn't require any authentication information). The
-response can be anything, in any JSON compatible Go type, It's up to the
+response can be anything, in any Go type that can be serialized to and from JSON, It's up to the
 sender. Kite has some predefined helper methods to convert the response to the
 given type. In this example the second kite just connects to our first kite and
 calls the first kite's `kite.ping` method. We didn't send any arguments with
@@ -169,7 +169,7 @@ pong
 
 Let us add our first custom method. This simple method is going to accept a
 number and return a squared result. The name of the method will be `square`.
-To assign a function to a method just be sure it's satisfies the satisfies the
+To assign a function to a method just be sure it's satisfies the
 `kite.Handler` interface (http://godoc.org/github.com/koding/kite#Handler):
 
 
@@ -214,7 +214,7 @@ func main() {
 }
 ```
 
-As you see the only think that has changed is the method call. When we call the
+As you see the only thing that has changed is the method call. When we call the
 "square" method we also send the number `4` with as arguments. You can send any
 JSON compatible Go type. Running the examples, we'll get simply:
 
@@ -226,10 +226,10 @@ It's that easy.
 
 # Service discovery, how to find each other
 
-Service discovery is baked into the Kite library. As said earlier, It's a very
-fundamental foundation and is also heavily reflected via the Kite API. That
-means the Kite library enforces the users to make use of service discovery. To
-be able discovered by others they need to know your real identitiy. Basically
+Service discovery is baked into the Kite library. As said earlier, it's a very
+fundamental concept and is also heavily reflected via the Kite API. That
+means the Kite library forces the users to make use of service discovery. To
+be discovered by others they need to know your real identitiy. Basically
 you need to be authenticated. Authentication can be done in several ways and is
 defined by how Kontrol enforces it. It can disable it completely, might ask the
 user password (via the kite cli), could fetch a token and validate what the
@@ -238,10 +238,10 @@ user provided and so on...
 `kitectl` is a handy CLI program which can be used to manage kites easily via
 command line. We can use it (via `kitectl register` command) to authenticate
 our machine to Kontrol, so every kite running on our host will be authenticated
-by default. This command basically creates a `kite.key` file under the home
+by default. This command creates a `kite.key` file under the home
 directory, which is signed by kontrol itself. The content is not encrypted,
 however because it's signed we can use it to securely talk to Kontrol. So
-therefore, every request we'll make to kontrol will be trusted by Kontrol.
+therefore every request we'll make to kontrol will be trusted by Kontrol.
 Our username will be stored in Kontrol, so every other person in the world can
 trust us (of course assuming they also using the same Kontrol server).
 Trusting Kontrol means we can trust everyone. So this is important, because
@@ -277,11 +277,11 @@ As you see we used the `Register()` method to register ourself to Kontrol. The
 only parameter we pass is our URL that others should be use to connect to us.
 This value will be stored in Kontrol and every other kite can fetch it from
 there. The `Register()` method is a special method that it's automatically
-re-registers itself if you disconnect/connect again. To not spam Kontrol is
-uses the [exponential
+re-registers itself if you disconnect/connect again. To protect Kontrol 
+we use the [exponential
 backoff](http://en.wikipedia.org/wiki/Exponential_backoff.) algorithm to try
 slowly. Because it's also used heavily in production by Koding there are many
-little details and improvements such like this. Also another detail here is,
+little details and improvements like this. Also another detail here is,
 you don't pass Kontrol's URL while registration. Because you are already
 authenticated, Kontrol's URL is stored in `kite.key`. All you need is to call
 `Register()`.
@@ -335,30 +335,29 @@ the "second" kite is going to do. We can randomly pick one, we can call one by
 one (round-robin), we can ping all of them and select the fastest one, and so
 on ... 
 
-So all this is left on the caller. Kontrol doesn't have any idea of a Kite
-behaves, it only know if it's connected (registered) or not. Because it has
-less to do, it's much more simpler to deal with it and it's up to the caller to
-extend their system with complex designs.
+So all this is left on the caller. Kontrol doesn't have any idea of how a Kite
+behaves, it only knows if it's connected (registered) or not. This simplicity
+allows the kite implementer to build more complexity on top of the protocol.
 
 # Conclusion
 
-The Kite library has many other small improvements and features that are left
-here. For example there is Kite.js which can be used as a client side library
+The Kite library has many other small improvements and features that we haven't 
+yet seen. For example there is Kite.js which can be used as a client side library
 on browsers. It also contains a node.js server equivalent (albeit not as
 finished as Go counterpart). It contains a tunnelproxy and reverseproxy out of
-the box, that can be used multiplex kites behind a single port/app. It's being
+the box, that can be used to multiplex kites behind a single port/app. It's being
 used in production by Koding so it has many performance based fixes and
 improvements by default.  
 
-Writing Kites and using it is the most important part. Once started to
-use it, you can feel the easyness and how simple the API is. The Kite library
+Writing Kites and using it is the most important part. Once you startto
+use it, you can feel the simplicity of the API. The Kite library
 is easy to use because it shares the same philosophy as Go. It uses some of the
 best open source projects written in Go (such as etcd). Go made it simple to
 write a stable platform as a foundation for the Kite library. Because of the
 nature of Go, extending and improvement the Kite library was easy too. 
 
-I hope you get the idea and intention of this library and what it can and
-can't. We are using and maintaining it extensively. However there are many
+I hope you get the idea and intention of this library and its capabilities 
+and limitations. We are using and maintaining it extensively. However there are many
 things we want to improve too (such as providing other message protocols and
 transport protocols). Feel free to fork the project
 (https://github.com/koding/kite) and play around.  Contributions are welcome!
