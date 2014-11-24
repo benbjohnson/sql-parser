@@ -1,7 +1,7 @@
 +++
 author = ["Matt Aimonetti"]
 date = "2014-11-24T00:00:00-08:00"
-title = "How Go helped shaped Splice's engineering culture"
+title = "How Go Helped Shape Splice's engineering culture"
 series = ["Birthday Bash 2014"]
 +++
 
