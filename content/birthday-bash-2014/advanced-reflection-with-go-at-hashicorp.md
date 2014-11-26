@@ -94,7 +94,7 @@ configuration but many times for APIs as well.
 
 ## copystructure
 
-[copystructure](https://github.com/mitchellh/mapstructure) is a library for
+[copystructure](https://github.com/mitchellh/copystructure) is a library for
 performing deep copies of values in Go.
 
 This library usually doesn't need a "why?" as the utility is clear: sometimes
