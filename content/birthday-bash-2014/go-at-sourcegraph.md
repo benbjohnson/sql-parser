@@ -1,6 +1,6 @@
 +++
 author = ["Quinn Slack"]
-title = "Go at Sourcegraph"
+title = "Go at Sourcegraph - Serving Terabytes of Git Data, Tracing App Performance, and Caching HTTP Resources"
 date = "2014-11-28"
 series = ["Birthday Bash 2014"]
 +++
