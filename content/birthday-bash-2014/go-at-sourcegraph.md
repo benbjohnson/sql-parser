@@ -1,7 +1,7 @@
 +++
 author = ["Quinn Slack"]
 title = "Go at Sourcegraph"
-date = "2014-11-27"
+date = "2014-11-28"
 series = ["Birthday Bash 2014"]
 +++
 
