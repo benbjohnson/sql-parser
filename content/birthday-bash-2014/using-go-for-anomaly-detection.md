@@ -30,7 +30,7 @@ The design of anode is simple. We have input plugins, which take an input metric
 
 In the example shown above, the analysis plugin emits a new metric (orange) when the input metric falls outside three standard deviations of its prior values. This is a simple statistical technique known as [three sigma](http://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule) that is useful for data with a normal distribution.
 
-<img alt="Diagram of anode architecture" src="/postimages/using-go-for-anomaly-detection/anode-diagram.png" width=803 height=500 />
+<img alt="Diagram of anode architecture" src="/postimages/using-go-for-anomaly-detection/anode-diagram.png" width=599 height=278 />
 
 Channels and goroutines mean we can construct parallel analysis pipelines with very little effort. Each plugin runs in its own goroutine, and shares data with channels. As well as easy concurrency, another advantage of using Go is being able to supply a single binary to users.
 
