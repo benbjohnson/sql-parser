@@ -39,7 +39,7 @@ func (p *Parser) Parse() (*SelectStatement, error) {
 	for {
 		// Read a field.
 		tok, lit := p.scanIgnoreWhitespace()
-		if tok != IDENT {
+		if tok != IDENT && tok != ASTERISK {
 			return nil, fmt.Errorf("found %q, expected field", lit)
 		}
 		stmt.Fields = append(stmt.Fields, lit)

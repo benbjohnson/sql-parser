@@ -33,6 +33,15 @@ func TestParser_ParseStatement(t *testing.T) {
 			},
 		},
 
+		// Select all statement
+		{
+			s: `SELECT * FROM my_table`,
+			stmt: &sql.SelectStatement{
+				Fields:    []string{"*"},
+				TableName: "my_table",
+			},
+		},
+
 		// Errors
 		{s: `foo`, err: `found "foo", expected SELECT`},
 		{s: `SELECT !`, err: `found "!", expected field`},
