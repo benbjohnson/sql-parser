@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/benbjohnson/sql-parser"
+	"github.com/oldenbur/sql-parser"
 )
 
 // Ensure the scanner can scan tokens correctly.

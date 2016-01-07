@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/benbjohnson/sql-parser"
+	"github.com/oldenbur/sql-parser"
 )
 
 // Ensure the parser can parse strings into Statement ASTs.
