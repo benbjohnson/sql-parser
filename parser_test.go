@@ -1,62 +1,67 @@
 package sql_test
 
 import (
-	"reflect"
 	"strings"
 	"testing"
 
+	log "github.com/cihub/seelog"
 	"github.com/oldenbur/sql-parser"
+	T "github.com/oldenbur/sql-parser/testutil"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
-// Ensure the parser can parse strings into Statement ASTs.
-func TestParser_ParseStatement(t *testing.T) {
-	var tests = []struct {
-		s    string
-		stmt *sql.SelectStatement
-		err  string
-	}{
-		// Single field statement
-		{
-			s: `SELECT name FROM tbl`,
-			stmt: &sql.SelectStatement{
-				Fields:    []string{"name"},
-				TableName: "tbl",
-			},
-		},
+func init() { T.ConfigureTestLogger() }
 
-		// Multi-field statement
-		{
-			s: `SELECT first_name, last_name, age FROM my_table`,
-			stmt: &sql.SelectStatement{
-				Fields:    []string{"first_name", "last_name", "age"},
-				TableName: "my_table",
-			},
-		},
+func TestParser_ParseSimpleSelect(t *testing.T) {
 
-		// Select all statement
-		{
-			s: `SELECT * FROM my_table`,
-			stmt: &sql.SelectStatement{
-				Fields:    []string{"*"},
-				TableName: "my_table",
-			},
-		},
+	Convey("Single field statement\n", t, func() {
+		stmt, err := testParse(`SELECT name FROM tbl`)
+		So(err, ShouldBeNil)
+		log.Debug("SQL: ", stmt)
+		So(stmt, ShouldResemble, &sql.SelectStatement{Fields: []string{"name"}, TableName: "tbl"})
+	})
 
-		// Errors
-		{s: `foo`, err: `found "foo", expected SELECT`},
-		{s: `SELECT !`, err: `found "!", expected field`},
-		{s: `SELECT field xxx`, err: `found "xxx", expected FROM`},
-		{s: `SELECT field FROM *`, err: `found "*", expected table name`},
-	}
+	Convey("Multi-field statement\n", t, func() {
+		stmt, err := testParse(`SELECT first_name, last_name, age FROM my_table`)
+		So(err, ShouldBeNil)
+		log.Debug("SQL: ", stmt)
+		So(stmt, ShouldResemble, &sql.SelectStatement{
+			Fields:    []string{"first_name", "last_name", "age"},
+			TableName: "my_table",
+		})
+	})
 
-	for i, tt := range tests {
-		stmt, err := sql.NewParser(strings.NewReader(tt.s)).Parse()
-		if !reflect.DeepEqual(tt.err, errstring(err)) {
-			t.Errorf("%d. %q: error mismatch:\n  exp=%s\n  got=%s\n\n", i, tt.s, tt.err, err)
-		} else if tt.err == "" && !reflect.DeepEqual(tt.stmt, stmt) {
-			t.Errorf("%d. %q\n\nstmt mismatch:\n\nexp=%#v\n\ngot=%#v\n\n", i, tt.s, tt.stmt, stmt)
-		}
-	}
+	Convey("Select all statement\n", t, func() {
+		stmt, err := testParse(`SELECT * FROM my_table`)
+		So(err, ShouldBeNil)
+		log.Debug("SQL: ", stmt)
+		So(stmt, ShouldResemble, &sql.SelectStatement{Fields: []string{"*"}, TableName: "my_table"})
+	})
+
+	Convey("Expected SELECT", t, func() {
+		_, err := testParse(`foo`)
+		So(errstring(err), ShouldEqual, `found "foo", expected SELECT`)
+	})
+
+	Convey("Expected field", t, func() {
+		_, err := testParse(`SELECT !`)
+		So(errstring(err), ShouldEqual, `found "!", expected field`)
+	})
+
+	Convey("Expected FROM", t, func() {
+		_, err := testParse(`SELECT field xxx`)
+		So(errstring(err), ShouldEqual, `found "xxx", expected FROM`)
+	})
+
+	Convey("Expected table name", t, func() {
+		_, err := testParse(`SELECT field FROM *`)
+		So(errstring(err), ShouldEqual, `found "*", expected table name`)
+	})
+}
+
+// testParse returns the result of parsing the specified string.
+func testParse(s string) (*sql.SelectStatement, error) {
+	return sql.NewParser(strings.NewReader(s)).Parse()
 }
 
 // errstring returns the string representation of an error.
