@@ -10,7 +10,8 @@ const (
 	WS
 
 	// Literals
-	IDENT // main
+	IDENT  // main
+	NUMBER // e.g. 1, 12.34, -46, -98.765
 
 	// Misc characters
 	ASTERISK // *
