@@ -1,45 +1,70 @@
-package sql_test
+package sql
 
 import (
 	"strings"
 	"testing"
 
-	"github.com/benbjohnson/sql-parser"
+	log "github.com/cihub/seelog"
+	T "github.com/oldenbur/sql-parser/testutil"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
-// Ensure the scanner can scan tokens correctly.
-func TestScanner_Scan(t *testing.T) {
-	var tests = []struct {
-		s   string
-		tok sql.Token
-		lit string
-	}{
-		// Special tokens (EOF, ILLEGAL, WS)
-		{s: ``, tok: sql.EOF},
-		{s: `#`, tok: sql.ILLEGAL, lit: `#`},
-		{s: ` `, tok: sql.WS, lit: " "},
-		{s: "\t", tok: sql.WS, lit: "\t"},
-		{s: "\n", tok: sql.WS, lit: "\n"},
+func init() { T.ConfigureTestLogger() }
 
-		// Misc characters
-		{s: `*`, tok: sql.ASTERISK, lit: "*"},
+func TestScanner(t *testing.T) {
 
-		// Identifiers
-		{s: `foo`, tok: sql.IDENT, lit: `foo`},
-		{s: `Zx12_3U_-`, tok: sql.IDENT, lit: `Zx12_3U_`},
+	defer log.Flush()
 
-		// Keywords
-		{s: `FROM`, tok: sql.FROM, lit: "FROM"},
-		{s: `SELECT`, tok: sql.SELECT, lit: "SELECT"},
-	}
+	Convey("Special tokens\n", t, func() {
+		testScanner(``, EOF, ``)
+		testScanner(`#`, ILLEGAL, `#`)
+		testScanner(` `, WS, ` `)
+		testScanner(`    `, WS, `    `)
+		testScanner("\t", WS, "\t")
+		testScanner("\n", WS, "\n")
 
-	for i, tt := range tests {
-		s := sql.NewScanner(strings.NewReader(tt.s))
-		tok, lit := s.Scan()
-		if tt.tok != tok {
-			t.Errorf("%d. %q token mismatch: exp=%q got=%q <%q>", i, tt.s, tt.tok, tok, lit)
-		} else if tt.lit != lit {
-			t.Errorf("%d. %q literal mismatch: exp=%q got=%q", i, tt.s, tt.lit, lit)
-		}
-	}
+		testScanner(`*`, ASTERISK, `*`)
+		testScanner(`,`, COMMA, `,`)
+		testScanner(`(`, PAREN_L, `(`)
+		testScanner(`)`, PAREN_R, `)`)
+	})
+
+	Convey("Identifiers\n", t, func() {
+		testScanner(`foo`, IDENT, `foo`)
+		testScanner(`Zx12_3U_-*`, IDENT, `Zx12_3U_-*`)
+	})
+
+	Convey("Numbers\n", t, func() {
+		testScanner(`1`, NUMBER, `1`)
+		testScanner(`12.34`, NUMBER, `12.34`)
+		testScanner(`-46`, NUMBER, `-46`)
+		testScanner(`-98.765`, NUMBER, `-98.765`)
+	})
+
+	Convey("Keywords\n", t, func() {
+		testScanner(`FROM`, FROM, `FROM`)
+		testScanner(`From`, FROM, `From`)
+		testScanner(`from`, FROM, `from`)
+		testScanner(`SELECT`, SELECT, `SELECT`)
+		testScanner(`WHERE`, WHERE, `WHERE`)
+		testScanner(`AND`, AND, `AND`)
+		testScanner(`OR`, OR, `OR`)
+	})
+
+	Convey("Operators\n", t, func() {
+		testScanner(`=`, EQ, `=`)
+		testScanner(`!=`, NE, `!=`)
+		testScanner(`<`, LT, `<`)
+		testScanner(`>`, GT, `>`)
+		testScanner(`<=`, LE, `<=`)
+		testScanner(`>=`, GE, `>=`)
+	})
+
+}
+
+func testScanner(str string, tok Token, lit string) {
+	s := NewScanner(strings.NewReader(str))
+	tokTest, litTest := s.Scan()
+	So(tokTest, ShouldEqual, tok)
+	So(litTest, ShouldEqual, lit)
 }

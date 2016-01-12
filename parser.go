@@ -3,12 +3,17 @@ package sql
 import (
 	"fmt"
 	"io"
+	"strings"
 )
 
 // SelectStatement represents a SQL SELECT statement.
 type SelectStatement struct {
 	Fields    []string
 	TableName string
+}
+
+func (s SelectStatement) String() string {
+	return fmt.Sprintf("SELECT %s FROM %s", strings.Join(s.Fields, ", "), s.TableName)
 }
 
 // Parser represents a parser.
