@@ -60,6 +60,16 @@ func TestScanner(t *testing.T) {
 		testScanner(`>=`, GE, `>=`)
 	})
 
+	Convey("Strings\n", t, func() {
+		testScanner(`"abc"`, STRING, `"abc"`)
+		testScanner(`'abc 789 @#$'`, STRING, `'abc 789 @#$'`)
+		testScanner(`"Howdy\" \"ho"`, STRING, `"Howdy\" \"ho"`)
+		testScanner(`'""Bucky  \'"\' Badger""'`, STRING, `'""Bucky  \'"\' Badger""'`)
+		testScanner(`'illegal1
+		'`, ILLEGAL, `'illegal1`)
+		testScanner(`'illegal2`, ILLEGAL, `'illegal2`)
+	})
+
 }
 
 func testScanner(str string, tok Token, lit string) {

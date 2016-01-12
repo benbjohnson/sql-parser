@@ -37,6 +37,12 @@ func (s *Scanner) Scan() (tok Token, lit string) {
 	} else if isOpChar(ch) {
 		s.unread()
 		return s.scanOp()
+	} else if ch == '\'' {
+		s.unread()
+		return s.scanStrSngl()
+	} else if ch == '"' {
+		s.unread()
+		return s.scanStrDbl()
 	}
 
 	// Otherwise read the individual character.
@@ -180,6 +186,41 @@ func (s *Scanner) scanOp() (tok Token, lit string) {
 	return ILLEGAL, buf.String()
 }
 
+// scanStr consumes the current rune, which is assumed to be a quote,
+// and continues to consume until either a newline or an unescaped
+// closing quote is encountered.
+func (s *Scanner) scanStrSngl() (tok Token, lit string) {
+	return s.scanStr('\'')
+}
+
+func (s *Scanner) scanStrDbl() (tok Token, lit string) {
+	return s.scanStr('"')
+}
+
+func (s *Scanner) scanStr(term rune) (tok Token, lit string) {
+
+	var buf bytes.Buffer
+	ch := s.read()
+	buf.WriteRune(ch)
+
+	for {
+		if ch := s.read(); ch == eof || ch == '\n' {
+			return ILLEGAL, buf.String()
+		} else if ch == '\\' {
+			ch := s.read()
+			buf.WriteRune('\\')
+			buf.WriteRune(ch)
+		} else if ch == term {
+			buf.WriteRune(ch)
+			break
+		} else {
+			buf.WriteRune(ch)
+		}
+	}
+
+	return STRING, buf.String()
+}
+
 // read reads the next rune from the bufferred reader.
 // Returns the rune(0) if an error occurs (or io.EOF is returned).
 func (s *Scanner) read() rune {
@@ -187,6 +228,12 @@ func (s *Scanner) read() rune {
 	if err != nil {
 		return eof
 	}
+	return ch
+}
+
+func (s *Scanner) peek() rune {
+	ch := s.read()
+	s.unread()
 	return ch
 }
 
