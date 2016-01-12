@@ -11,13 +11,14 @@ const (
 
 	// Literals
 	IDENT  // main
-	NUMBER // e.g. 1, 12.34, -46, -98.765
+	NUMBER // 1, 12.34, -46, -98.765
+    STRING // 'abc', "DEF 123 &*$"
 
 	// Misc characters
-	ASTERISK // *
-	COMMA    // ,
-	PAREN_L  // (
-	PAREN_R  // )
+	ASTERISK   // *
+	COMMA      // ,
+	PAREN_L    // (
+	PAREN_R    // )
 
 	// Operators
 	EQ // =
