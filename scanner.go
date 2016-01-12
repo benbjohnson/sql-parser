@@ -34,6 +34,9 @@ func (s *Scanner) Scan() (tok Token, lit string) {
 	} else if isDigit(ch) || ch == '-' {
 		s.unread()
 		return s.scanNumber()
+	} else if isOpChar(ch) {
+		s.unread()
+		return s.scanOp()
 	}
 
 	// Otherwise read the individual character.
@@ -134,6 +137,49 @@ func (s *Scanner) scanNumber() (tok Token, lit string) {
 	return NUMBER, buf.String()
 }
 
+// scanOp consumes the current rune and subsequent operator runes, returning
+// the operator type and literal string, i.e. =, !=, <, >, <= or >=.
+func (s *Scanner) scanOp() (tok Token, lit string) {
+	var buf bytes.Buffer
+	ch := s.read()
+	buf.WriteRune(ch)
+
+	if ch == '!' {
+		ch = s.read()
+		if ch != '=' {
+			if ch != eof {
+				buf.WriteRune(ch)
+			}
+			return ILLEGAL, buf.String()
+		}
+		buf.WriteRune(ch)
+		return NE, buf.String()
+	} else if ch == '=' {
+		return EQ, buf.String()
+	} else if ch == '<' {
+		ch = s.read()
+		if ch != '=' {
+			s.unread()
+			return LT, buf.String()
+		} else {
+			buf.WriteRune(ch)
+			return LE, buf.String()
+		}
+		return
+	} else if ch == '>' {
+		ch = s.read()
+		if ch != '=' {
+			s.unread()
+			return GT, buf.String()
+		} else {
+			buf.WriteRune(ch)
+			return GE, buf.String()
+		}
+	}
+
+	return ILLEGAL, buf.String()
+}
+
 // read reads the next rune from the bufferred reader.
 // Returns the rune(0) if an error occurs (or io.EOF is returned).
 func (s *Scanner) read() rune {
@@ -160,6 +206,9 @@ func isLetter(ch rune) bool { return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && c
 
 // isDigit returns true if the rune is a digit.
 func isDigit(ch rune) bool { return (ch >= '0' && ch <= '9') }
+
+// isOpChar returns true if the run is an operator character.
+func isOpChar(ch rune) bool { return ch == '=' || ch == '!' || ch == '<' || ch == '>' }
 
 // eof represents a marker rune for the end of the reader.
 var eof = rune(0)
