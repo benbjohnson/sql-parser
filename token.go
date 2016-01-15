@@ -35,3 +35,51 @@ const (
 	AND
 	OR
 )
+
+func (t Token) String() string {
+	switch (t) {
+	case ILLEGAL:
+		return "ILLEGAL"
+	case EOF:
+		return "EOF"
+	case WS:
+		return "WS"
+	case IDENT:
+		return "IDENT"
+	case NUMBER:
+		return "NUMBER"
+	case STRING:
+		return "STRING"
+	case ASTERISK:
+		return "ASTERISK"
+	case COMMA:
+		return "COMMA"
+	case PAREN_L:
+		return "PAREN_L"
+	case PAREN_R:
+		return "PAREN_R"
+	case EQ:
+		return "EQ"
+	case NE:
+		return "NE"
+	case GT:
+		return "GT"
+	case LT:
+		return "LT"
+	case GE:
+		return "GE"
+	case LE:
+		return "LE"
+	case SELECT:
+		return "SELECT"
+	case FROM:
+		return "FROM"
+	case WHERE:
+		return "WHERE"
+	case AND:
+		return "AND"
+	case OR:
+		return "OR"
+	}
+	return "UNKNOWN"
+}
