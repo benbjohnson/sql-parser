@@ -7,8 +7,9 @@ import (
 
 // SelectStatement represents a SQL SELECT statement.
 type SelectStatement struct {
-	Fields    []string
-	TableName string
+	Fields     []string
+	TableName  string
+	Conditions []string
 }
 
 // Parser represents a parser.
@@ -62,6 +63,33 @@ func (p *Parser) Parse() (*SelectStatement, error) {
 		return nil, fmt.Errorf("found %q, expected table name", lit)
 	}
 	stmt.TableName = lit
+
+	// Next we should see the "WHERE" keyword.
+	if tok, lit := p.scanIgnoreWhitespace(); tok != WHERE {
+		return nil, fmt.Errorf("found %q, expected WHERE", lit)
+	}
+
+	// Next we should loop over all our and delimited conditions.
+	condition := ""
+	for {
+		// Read a field.
+		_, lit := p.scanIgnoreWhitespace()
+		condition += lit
+
+		if tok, lit := p.scanIgnoreWhitespace(); tok == AND {
+			stmt.Conditions = append(stmt.Conditions, condition)
+			condition = ""
+		} else {
+			if tok == EOF {
+				stmt.Conditions = append(stmt.Conditions, condition)
+				p.unscan()
+				break
+			} else {
+				condition += lit
+			}
+
+		}
+	}
 
 	// Return the successfully parsed statement.
 	return stmt, nil

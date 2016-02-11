@@ -19,4 +19,7 @@ const (
 	// Keywords
 	SELECT
 	FROM
+	WHERE
+	AND // and
+	OPER
 )

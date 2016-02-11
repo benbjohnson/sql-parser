@@ -35,6 +35,12 @@ func (s *Scanner) Scan() (tok Token, lit string) {
 
 	// Otherwise read the individual character.
 	switch ch {
+	case '=':
+		return OPER, string(ch)
+	case '>':
+		return OPER, string(ch)
+	case '<':
+		return OPER, string(ch)
 	case eof:
 		return EOF, ""
 	case '*':
@@ -93,6 +99,10 @@ func (s *Scanner) scanIdent() (tok Token, lit string) {
 		return SELECT, buf.String()
 	case "FROM":
 		return FROM, buf.String()
+	case "WHERE":
+		return WHERE, buf.String()
+	case "AND":
+		return AND, buf.String()
 	}
 
 	// Otherwise return as a regular identifier.
@@ -116,10 +126,15 @@ func (s *Scanner) unread() { _ = s.r.UnreadRune() }
 func isWhitespace(ch rune) bool { return ch == ' ' || ch == '\t' || ch == '\n' }
 
 // isLetter returns true if the rune is a letter.
-func isLetter(ch rune) bool { return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') }
+func isLetter(ch rune) bool {
+	return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') //|| isOpers(ch)
+}
 
 // isDigit returns true if the rune is a digit.
 func isDigit(ch rune) bool { return (ch >= '0' && ch <= '9') }
+
+// isOpers returns true if the rune is a digit.
+func isOpers(ch rune) bool { return ch == '=' || ch == '>' || ch == '<' }
 
 // eof represents a marker rune for the end of the reader.
 var eof = rune(0)
