@@ -1,4 +1,4 @@
-package sql
+package main
 
 // Token represents a lexical token.
 type Token int
@@ -19,4 +19,7 @@ const (
 	// Keywords
 	SELECT
 	FROM
+	WHERE
+	AND // and
+	OPER
 )
