@@ -2,7 +2,7 @@ package sql
 
 import (
 	"fmt"
-	"io"
+	"strings"
 )
 
 // SelectStatement represents a SQL SELECT statement.
@@ -22,7 +22,8 @@ type Parser struct {
 }
 
 // NewParser returns a new instance of Parser.
-func NewParser(r io.Reader) *Parser {
+func NewParser(q string) *Parser {
+	r := strings.NewReader(q)
 	return &Parser{s: NewScanner(r)}
 }
 
@@ -46,7 +47,7 @@ func (p *Parser) Parse() (*SelectStatement, error) {
 
 		// If the next token is not a comma then break the loop.
 		if tok, _ := p.scanIgnoreWhitespace(); tok != COMMA {
-			p.unscan()
+			p.unScan()
 			break
 		}
 	}
@@ -68,7 +69,7 @@ func (p *Parser) Parse() (*SelectStatement, error) {
 }
 
 // scan returns the next token from the underlying scanner.
-// If a token has been unscanned then read that instead.
+// If a token has been unScanned then read that instead.
 func (p *Parser) scan() (tok Token, lit string) {
 	// If we have a token on the buffer, then return it.
 	if p.buf.n != 0 {
@@ -79,7 +80,7 @@ func (p *Parser) scan() (tok Token, lit string) {
 	// Otherwise read the next token from the scanner.
 	tok, lit = p.s.Scan()
 
-	// Save it to the buffer in case we unscan later.
+	// Save it to the buffer in case we unScan later.
 	p.buf.tok, p.buf.lit = tok, lit
 
 	return
@@ -94,5 +95,5 @@ func (p *Parser) scanIgnoreWhitespace() (tok Token, lit string) {
 	return
 }
 
-// unscan pushes the previously read token back onto the buffer.
-func (p *Parser) unscan() { p.buf.n = 1 }
+// unScan pushes the previously read token back onto the buffer.
+func (p *Parser) unScan() { p.buf.n = 1 }
